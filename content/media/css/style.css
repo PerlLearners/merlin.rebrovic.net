@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #20201c;
+}
+
+body {
+    font-family: "EB Garamond", Georgia, serif;
+    font-size: 62.5%;
+    color: #dbd6c9;
+    text-rendering: optimizeLegibility;
+}
+
+a, a:visited {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#container {
+    width: 960px;
+    padding: 0 20px;
+    margin: 0px auto;
+    font-size: 1.7em;
+    line-height: 1.53em;
+}
+
+section {
+    display: block;
+}
+
+#notification {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #555;
+}
+
+#intro hgroup {
+    margin: 52px 0;
+}
+
+#intro h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 2.618em;
+    line-height: 1.168em;
+}
+
+#intro h2 {
+    font-weight: normal;
+    color: white;
+    font-size: 1.618em;
+    line-height: 0.945em;
+    margin: 0.473em 0;
+}
+
+#intro hgroup h2 {
+    color: #dbd6c9;
+}
+
+#intro #wizard, #intro #engineer,
+#content #online_ids, #content #work {
+    width: 460px;
+    float: left;
+}
+
+#intro #wizard, #content #online_ids {
+    margin-right: 40px;
+}
+
+#intro p.source {
+    font-size: 0.618em;
+    color: #555;
+}
+
+#content {
+    margin: 52px 0;
+}
+
+footer {
+    height: 50px;
+    text-align: right;
+}
+
+/* taken from the HTML5 Boilerplate */
+.clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;	 } 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

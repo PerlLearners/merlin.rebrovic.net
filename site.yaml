@@ -1,0 +1,6 @@
+media_root: media
+media_url: /media
+template: hyde.ext.templates.jinja.Jinja2Template
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+
