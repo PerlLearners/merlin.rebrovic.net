@@ -13,6 +13,21 @@ html {
 body {
 }
 
+nav ul li {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    float: left;
+    width: 25%;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a {
+    background-color: #555;
+    display: block;
+    padding: 1em 0;
+}
+
 p, ol, ul {
     margin-bottom: 1.125em;
 }

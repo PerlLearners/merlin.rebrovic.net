@@ -13,7 +13,17 @@
     <![endif]-->
 </head>
 <body>
-    {# <header></header> #}
+    <header>
+        <nav>
+        <ul class="clearfix">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog/on-happiness-zappos.html">Blog</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+        </ul>
+        </nav>
+    </header>
+
     <div id="main-content">
     {% block content %}{% endblock %}
     </div>
