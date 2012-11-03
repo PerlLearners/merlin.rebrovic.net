@@ -3,30 +3,7 @@
 {% block content %}
 <article class="blog-post">
 {% filter markdown -%}
-On happiness by the Zappos CEO
-==============================
-
-Tony Hsieh, the CEO who had led Zappos from a small start-up to a 1
-billion dollar company sold to Amazon last year, recently wrote a
-Delivering Happiness book. In it he tells us about his entrepreneurial
-ventures, but mostly about Zappos, its world famous company culture and
-first class customer service.
-
-One thing he mentions are what he thinks of as four pillars of happiness
-on a workplace, but also in life in general. For a person to be happy he
-or she must have:
-
-  * **Perceived control** – A person has to have a certain level of
-    autonomy and a right to make a decision, even a small one.
-  * **Perceived progress** – A person should be able to see progress of
-    its skills, positions, levels of autonomy, etc. The workplace should
-    be arranged in a way to provide a regular feedback.
-  * **Connectedness** – It is much easier to work with people who are
-    treated as peers and friends, not as company’s resources.
-  * **Vision/Meaning** – Nobody likes to work on something and than
-    never to see it come to life or just watch it getting discarded
-    without an explanation. A goal or at least a direction is something
-    that can be a much stronger motivator than a paycheck.
+    {% block article_content %}{% endblock %}
 {%- endfilter %}
 </article>
 {% endblock %}

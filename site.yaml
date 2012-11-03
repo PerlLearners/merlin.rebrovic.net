@@ -4,6 +4,7 @@ media_url: /media
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
 
 meta:
     nodemeta: meta.yaml
