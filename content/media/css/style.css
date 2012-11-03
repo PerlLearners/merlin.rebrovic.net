@@ -1,11 +1,11 @@
 html {
-    background-color: #20201c;
+    background-color: #222;
 }
 
 body {
-    font-family: "EB Garamond", Georgia, serif;
+    font-family: "Quattrocento", Georgia, serif;
     font-size: 62.5%;
-    color: #dbd6c9;
+    color: #bbb;
     text-rendering: optimizeLegibility;
 }
 
