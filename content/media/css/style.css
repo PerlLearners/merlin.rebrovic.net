@@ -1,86 +1,66 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 html {
     background-color: #222;
+    font-family: "Quattrocento", Georgia, serif;
+    color: #bbb;
 }
 
 body {
-    font-family: "Quattrocento", Georgia, serif;
-    font-size: 62.5%;
-    color: #bbb;
-    text-rendering: optimizeLegibility;
+}
+
+p, ol, ul {
+    margin-bottom: 1.125em;
 }
 
 a, a:visited {
     color: #fff;
 }
 
-a:hover {
-    text-decoration: none;
+strong {
+    font-weight: bold;
 }
 
-#container {
-    width: 960px;
-    padding: 0 20px;
-    margin: 0px auto;
-    font-size: 1.7em;
-    line-height: 1.53em;
+article.blog-post {
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    line-height: 1.5;
+
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 31em;
+    /*
+     * 29 + 2*padding = 31
+     * 29em * 18px = 522px
+     */
 }
 
-section {
-    display: block;
+article.blog-post h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 1em;
 }
 
-#notification {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    color: #555;
+article.blog-post ul {
+    list-style-type: circle;
+    margin-left: 1.2em;
 }
 
-#intro hgroup {
-    margin: 52px 0;
+@media only screen and (min-width: 36em) {
+    article.blog-post ul {
+        margin-left: 0;
+    }
 }
 
-#intro h1 {
-    font-weight: normal;
-    color: white;
-    font-size: 2.618em;
-    line-height: 1.168em;
-}
-
-#intro h2 {
-    font-weight: normal;
-    color: white;
-    font-size: 1.618em;
-    line-height: 0.945em;
-    margin: 0.473em 0;
-}
-
-#intro hgroup h2 {
-    color: #dbd6c9;
-}
-
-#intro #wizard, #intro #engineer,
-#content #online_ids, #content #work {
-    width: 460px;
-    float: left;
-}
-
-#intro #wizard, #content #online_ids {
-    margin-right: 40px;
-}
-
-#intro p.source {
-    font-size: 0.618em;
-    color: #555;
-}
-
-#content {
-    margin: 52px 0;
-}
-
-footer {
-    height: 50px;
-    text-align: right;
+@media only screen and (min-width: 42em) {
+    article.blog-post {
+        font-size: 1.25em;
+    }
 }
 
 /* taken from the HTML5 Boilerplate */
