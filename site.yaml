@@ -1,6 +1,10 @@
+mode: development
 media_root: media
 media_url: /media
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
 
+meta:
+    nodemeta: meta.yaml
+    ga_tracking_code: UA-21972762-1
