@@ -1,1 +1,39 @@
-{% extends "article.j2" %}
+{% extends "base.j2" %}
+
+{% block content %}
+    <section id="intro" class="clearfix">
+        <hgroup>
+            <h1>wizard engineer</h1>
+            <h2>making stuff work</h2>
+        </hgroup>
+        <div id="wizard">
+           <h2>wizard</h2>
+           <p>A person who uses or practices magic that derives from supernatural or occult sources. His powers arise from his study, rather than having his magical abilities occur entirely spontaneously.</p>
+           <p class="source">source: Wikipedia</p>
+        </div>
+        <div id="engineer">
+           <h2>engineer</h2>
+           <p>A professional concerned with applying scientific knowledge to develop solutions for technical problems. The word engineer is derived from the Latin root ingenium, meaning “cleverness”.</p>
+        </div>
+    </section>
+
+    <section id="content" class="clearfix">
+        <div id="online_ids">
+            <p>You can find me on:</p>
+
+            <ul>
+                <li><a href="http://twitter.com/merlinrebrovic">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/in/merlinrebrovic">LinkedIn</a></li>
+                <li><a href="https://github.com/merlinrebrovic">GitHub</a></li>
+                <li><a href="http://www.slideshare.net/merlinrebrovic">SlideShare</a></li>
+            </ul>
+        </div>
+
+        <div id="work">
+            <p>Something I have been working on lately:<br />
+            <a href="/hyde-starter-kit/">Hyde Starter Kit</a>.</p>
+            <br />
+            <p>Sometimes I write on the <a href="http://www.fiveminutes.eu/author/merlin-rebrovic/">Five Minute's blog</a>.</p>
+        </div>
+    </section>
+{% endblock %}
