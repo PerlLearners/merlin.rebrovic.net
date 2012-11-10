@@ -35,17 +35,21 @@ strong {
     font-weight: bold;
 }
 
-article.blog-post {
+#main-content {
     font-size: 1.125em; /* 16px * 1.125 = 18px */
     line-height: 1.5;
-
+    max-width: 53.3333em; /* 53.3333 * 18px = 960px */
     margin: 0 auto;
     padding: 0 1em;
-    max-width: 31em;
-    /*
-     * 29 + 2*padding = 31
-     * 29em * 18px = 522px
-     */
+}
+
+.column2 {
+    margin-bottom: 1em;
+}
+
+article.blog-post {
+    margin: 0 auto;
+    max-width: 29em; /* 29em * 18px = 522px */
 }
 
 article.blog-post p,
@@ -54,13 +58,18 @@ article.blog-post ul {
     margin-bottom: 1.5em;
 }
 
+h1#intro,
 article.blog-post h1 {
     font-family: "Passion One", "Impact", sans-serif;
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: 1em;
     color: #dd8;
-    text-shadow: 0px 2px 2px black;
+    text-shadow: 0 0.05em 0.05em black;
+}
+
+h1#intro {
+    font-size: 2em; /* 18px * 2 = 36px */
 }
 
 article.blog-post ul {
@@ -69,8 +78,13 @@ article.blog-post ul {
 }
 
 @media only screen and (min-width: 36em) {
+    /* 36em * 16px (default size) = 576px */
     header {
         margin: 1em auto;
+    }
+
+    h1#intro {
+        font-size: 2.6666667em; /* 18px * 2.6* = 48px */
     }
 
     #main-nav ul {
@@ -84,15 +98,26 @@ article.blog-post ul {
     article.blog-post ul {
         margin-left: 0;
     }
+
+    .column2 {
+        float: left;
+        width: 50%;
+        padding-right: 1em;
+    }
 }
 
 @media only screen and (min-width: 42em) {
+    /* 42em * 16px (default size) = 672px */
     header {
         margin: 1em auto 2em auto;
     }
 
+    h1#intro {
+        font-size: 3.3333333em; /* 18px * 3.3* = 60px */
+    }
+
     article.blog-post {
-        font-size: 1.3125em; /* 16px * 1.3125 = 21px */
+        font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
 }
 
