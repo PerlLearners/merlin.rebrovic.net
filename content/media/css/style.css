@@ -12,7 +12,7 @@ html {
 
 header {
     max-width: 60em; /* 60 * 16px = 960px */
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 #main-nav ul li {
@@ -91,7 +91,7 @@ article.blog-post ul {
     }
 
     article.blog-post {
-        font-size: 1.25em;
+        font-size: 1.3125em; /* 16px * 1.3125 = 21px */
     }
 }
 
