@@ -47,6 +47,13 @@ a, a:visited {
     color: #fff;
 }
 
+#intro img {
+    width: 100%;
+    max-width: 10em;
+    margin: 0 auto 2em auto;
+    display: block;
+}
+
 strong {
     font-weight: bold;
 }
@@ -85,8 +92,25 @@ article.blog-post ul {
         margin: 1em auto;
     }
 
-    h1#intro {
+    #intro {
+        position: relative;
+    }
+
+    #intro h1 {
         font-size: 2.6666667em; /* 18px * 2.6* = 48px */
+        margin-bottom: 2em;
+        z-index: 2;
+        position: relative;
+    }
+
+    #intro img {
+        position: absolute;
+        right: 0;
+        bottom: -30%;
+        width: 30%;
+        z-index: 1;
+        margin: 0;
+        max-width: none;
     }
 
     #main-nav ul {
@@ -111,10 +135,10 @@ article.blog-post ul {
 @media only screen and (min-width: 42em) {
     /* 42em * 16px (default size) = 672px */
     header {
-        margin: 1em auto 2em auto;
+        margin: 1em auto 4em auto;
     }
 
-    h1#intro {
+    #intro h1 {
         font-size: 3.3333333em; /* 18px * 3.3* = 60px */
     }
 
