@@ -86,6 +86,12 @@ article.blog-post ul {
     margin-left: 1.2em;
 }
 
+@media only screen and (max-width: 22em) {
+    #intro h1 br {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 36em) {
     /* 36em * 16px (default size) = 576px */
     header {
