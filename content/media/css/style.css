@@ -85,9 +85,17 @@ article.blog-post ul {
     margin-bottom: 1.5em;
 }
 
+article.blog-post ol,
+article.blog-post ul {
+    margin-left: 1.2em;
+}
+
 article.blog-post ul {
     list-style-type: circle;
-    margin-left: 1.2em;
+}
+
+article.blog-post ol {
+    list-style-type: decimal;
 }
 
 @media only screen and (max-width: 22em) {
@@ -131,7 +139,8 @@ article.blog-post ul {
         width: auto;
     }
 
-    article.blog-post ul {
+    article.blog-post ul,
+    article.blog-post ol {
         margin-left: 0;
     }
 
