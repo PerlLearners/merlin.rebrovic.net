@@ -1,1 +1,8 @@
 Blog posts
+==========
+
+{% for res in resource.node.walk_resources() %}
+{% if res.name not in ['meta.yaml', 'index.html'] %}
+* [{{ res.meta.title }}]({{ res.full_url }})
+{% endif %}
+{% endfor %}
