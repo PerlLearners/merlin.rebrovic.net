@@ -1,0 +1,7 @@
+RewriteEngine On
+# Don't rewrite if the directory exists on the server
+RewriteCond %{REQUEST_FILENAME} !-d
+# Don't rewrite if the file exists on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+# Add .html extension to everything else
+RewriteRule ^(([^/]+/)*[^./]+)/?$ /$1.html [L]
