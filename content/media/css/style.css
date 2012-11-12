@@ -67,7 +67,7 @@ strong {
     line-height: 1.5;
     max-width: 53.3333em; /* 53.3333 * 18px = 960px */
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
 }
 
 .column2 {
@@ -98,9 +98,35 @@ article.blog-post ol {
     list-style-type: decimal;
 }
 
+.contact-list li {
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 0.1em;
+}
+
+.contact-list li a {
+    display: block;
+    padding: 0.5em 0;
+
+    text-align: center;
+    background-color: #383834;
+    border-radius: 0.2em;
+    text-decoration: none;
+}
+
+.contact-list li a:hover,
+.contact-list li a:focus {
+    background-color: #282824;
+}
+
 @media only screen and (max-width: 22em) {
     #intro h1 br {
         display: none;
+    }
+
+    .contact-list li {
+        width: 100%;
     }
 }
 
@@ -148,6 +174,10 @@ article.blog-post ol {
         float: left;
         width: 50%;
         padding-right: 1em;
+    }
+
+    .contact-list li {
+        width: 25%;
     }
 }
 
