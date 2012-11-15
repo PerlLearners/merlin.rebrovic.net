@@ -2,6 +2,11 @@
 
 {% block content %}
 <article class="blog-post">
+{% if resource.meta.created -%}
+<time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+    {{ resource.meta.created.strftime('%Y-%m-%d') }}
+</time>
+{%- endif %}
 {% filter markdown -%}
     {% block article_content %}{% endblock %}
 {%- endfilter %}

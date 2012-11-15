@@ -8,5 +8,8 @@ Blog posts
 {% for res in resource.node.walk_resources() %}
 {% if res.name not in ['meta.yaml', 'index.html'] %}
 * [{{ res.meta.title }}]({{ res.full_url }})
+  <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+    {{ res.meta.created.strftime('%Y-%m-%d') }}
+  </time>
 {% endif %}
 {% endfor %}
