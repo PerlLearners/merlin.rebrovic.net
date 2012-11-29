@@ -1,0 +1,16 @@
+{% macro latest_posts() -%}
+<ul>
+{# I didn't use sorter provided by grouper plugin because it sorts
+   resources inside each group and if I request everything together,
+   they are sorted "in blocks". #}
+{% for res in site.content.walk_resources_grouped_by_category()|sort(
+    reverse=True, attribute='meta.created') %}
+<li>
+    <a href="{{ res.full_url }}">{{ res.meta.title }}</a>
+    <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+    {{ res.meta.created.strftime('%Y-%m-%d') }}
+    </time>
+</li>
+{% endfor %}
+</ul>
+{%- endmacro %}
