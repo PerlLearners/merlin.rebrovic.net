@@ -6,6 +6,8 @@ plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
 meta:
     nodemeta: meta.yaml
     ga_tracking_code: UA-21972762-1
@@ -14,3 +16,18 @@ urlcleaner:
         - index.html
     strip_extensions:
         - html
+
+grouper:
+    category:
+        description: Blog category
+        groups:
+            - name: Tech
+              description: Software engineering
+            - name: Design
+              description: Sketching, visual arts and design
+            - name: News
+              description: Announcements and coverages
+            - name: People
+              description: Psychology, education and motivation
+            - name: Travel
+              description: World exploration

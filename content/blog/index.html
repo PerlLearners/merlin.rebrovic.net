@@ -2,11 +2,14 @@
 title: Blog posts
 ---
 
-{% for res in resource.node.walk_resources() %}
-{% if res.name not in ['meta.yaml', 'index.html'] %}
-* [{{ res.meta.title }}]({{ res.full_url }})
+{# I didn't use sorter provided by grouper plugin because it sorts
+   resources inside each group and if I request everything together,
+   they are sorted "in blocks".
+#}
+{% for res in site.content.walk_resources_grouped_by_category()|sort(
+    reverse=True, attribute='meta.created') %}
+  * [{{ res.meta.title }}]({{ res.full_url }})
   <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     {{ res.meta.created.strftime('%Y-%m-%d') }}
   </time>
-{% endif %}
 {% endfor %}
