@@ -110,6 +110,12 @@ article.blog-post .latest-posts time,
     line-height: 1.5em;
 }
 
+.column2 ul.latest-posts {
+    list-style-type: circle;
+    margin-left: 1.2em;
+}
+/* end hack - there are some in media queries */
+
 .contact-list li {
     display: block;
     width: 50%;
@@ -182,12 +188,6 @@ article.blog-post .latest-posts time,
         margin-left: 0;
     }
 
-    .column2 {
-        float: left;
-        width: 50%;
-        padding-right: 1em;
-    }
-
     .contact-list li {
         width: 25%;
     }
@@ -208,8 +208,21 @@ article.blog-post .latest-posts time,
         font-size: 3.3333333em; /* 18px * 3.3* = 60px */
     }
 
+    .column2 {
+        float: left;
+        width: 50%;
+        padding-right: 1em;
+    }
+
     article.blog-post {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    /* 60em * 16px (default size) = 960px */
+    .column2 ul.latest-posts {
+        margin-left: 0;
     }
 }
 
