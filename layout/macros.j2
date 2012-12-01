@@ -5,18 +5,15 @@
    they are sorted "in blocks". #}
 {% for res in site.content.walk_resources_grouped_by_category()|sort(
     reverse=True, attribute='meta.created') %}
-
-{# There is no breaking the loop in Jinja, so I have to check the limit
-   like this. If count is not defined, return all posts. #}
-{% if count is none or loop.index0 < count %}
+{% if count is not none %}
+    {% if loop.index > count %}{% break %}{% endif %}
+{% endif %}
 <li>
     <a href="{{ res.full_url }}">{{ res.meta.title }}</a>
     <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     {{ res.meta.created.strftime('%Y-%m-%d') }}
     </time>
 </li>
-{% endif %}
-
 {% endfor %}
 </ul>
 {%- endmacro %}
