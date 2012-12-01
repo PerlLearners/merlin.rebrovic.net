@@ -43,6 +43,10 @@ h2 {
     text-decoration: none;
 }
 
+#main-nav ul li a.active {
+    text-decoration: underline;
+}
+
 a, a:visited {
     color: #fff;
 }

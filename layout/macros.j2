@@ -20,3 +20,24 @@
 {% endfor %}
 </ul>
 {%- endmacro %}
+
+{% macro render_main_navigation() -%}
+<nav id="main-nav" class="clearfix">
+<ul class="clearfix">
+    {% for item in menu %}
+    {% set active = False -%}
+    {% if item.type == 'page' -%}
+        {% set active = (resource.url ==
+            site.content.resource_from_relative_path(item.url).url) -%}
+    {% else -%}
+        {% set active = (node ==
+            site.content.node_from_relative_path(item.url)) -%}
+    {%- endif %}
+    <li><a {% if active %}class="active"{% endif %}
+        href="{{ content_url(item.url) }}{% if item.type == 'node' %}/{% endif %}">
+        {{ item.name }}
+    </a></li>
+    {% endfor %}
+</ul>
+</nav>
+{%- endmacro %}

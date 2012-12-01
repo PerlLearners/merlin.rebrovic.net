@@ -11,6 +11,21 @@ plugins:
 meta:
     nodemeta: meta.yaml
     ga_tracking_code: UA-21972762-1
+context:
+    data:
+        menu:
+            - name: Home
+              type: page
+              url: index.html
+            - name: About
+              type: page
+              url: about.html
+            - name: Blog
+              type: node
+              url: blog/
+            - name: Projects
+              type: page
+              url: projects.html
 urlcleaner:
     index_file_names:
         - index.html
