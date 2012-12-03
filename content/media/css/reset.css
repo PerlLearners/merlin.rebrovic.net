@@ -48,10 +48,9 @@ q:before, q:after {
     content: none;
 }
 
-/* remember to define visible focus styles! 
 :focus {
-    outline: ?????;
-} */
+    outline: 1px dashed yellow;
+}
 
 /* remember to highlight inserts somehow! */
 ins {
