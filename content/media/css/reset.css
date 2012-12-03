@@ -52,11 +52,6 @@ q:before, q:after {
     outline: 1px dashed yellow;
 }
 
-/* remember to highlight inserts somehow! */
-ins {
-    text-decoration: none;
-}
-
 del {
     text-decoration: line-through;
 }
