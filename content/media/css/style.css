@@ -85,7 +85,8 @@ article.blog-post {
 
 article.blog-post p,
 article.blog-post ol,
-article.blog-post ul {
+article.blog-post ul,
+article.blog-post blockquote {
     margin-bottom: 1.5em;
 }
 
@@ -100,6 +101,12 @@ article.blog-post ul {
 
 article.blog-post ol {
     list-style-type: decimal;
+}
+
+article.blog-post blockquote {
+    padding-left: 0.9em;
+    font-style: italic;
+    border-left: 0.3em solid #45453c;
 }
 
 article.blog-post time {
@@ -196,6 +203,10 @@ article.blog-post .latest-posts time,
     article.blog-post ul,
     article.blog-post ol {
         margin-left: 0;
+    }
+
+    article.blog-post blockquote {
+        margin-left: -1.2em;
     }
 
     .contact-list li {
