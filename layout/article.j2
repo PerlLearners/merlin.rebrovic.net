@@ -13,7 +13,7 @@
 <h1>{{ resource.meta.title }}</h1>
 {%- endif %}
 
-{% filter markdown -%}
+{% filter markdown|typogrify -%}
     {% block article_content %}{% endblock %}
 {%- endfilter %}
 
