@@ -48,7 +48,7 @@ q:before, q:after {
     content: none;
 }
 
-:focus {
+a:focus {
     outline: 1px dashed yellow;
 }
 
