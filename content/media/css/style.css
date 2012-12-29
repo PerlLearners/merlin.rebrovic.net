@@ -100,7 +100,7 @@ body {
 
 header {
     max-width: 60em; /* 60 * 16px (default size) = 960px */
-    margin: 0 auto 1em auto;
+    margin: 0 auto 2em auto;
 }
 
 #main-nav ul {
