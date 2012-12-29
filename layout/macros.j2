@@ -30,7 +30,7 @@
         {% set active = (node ==
             site.content.node_from_relative_path(item.url)) -%}
     {%- endif %}
-    <li><a {% if active %}class="active"{% endif %}
+    <li {% if active %}class="active"{% endif %}><a
         href="{{ content_url(item.url) }}{% if item.type == 'node' %}/{% endif %}">
         {{ item.name }}
     </a></li>

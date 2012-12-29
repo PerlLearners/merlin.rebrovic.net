@@ -49,7 +49,7 @@ q:before, q:after {
 }
 
 a:focus {
-    outline: 1px dashed yellow;
+    outline: 1px dashed #EAD075;
 }
 
 del {
@@ -60,8 +60,23 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /***********************************
- end of reset
+ Personal stylesheet
+
+ Colors from a original palette:
+ #EAD075 - dark yellow
+ #B9543C - light orange
+ #A53539 - red
+ #06736C - light green
+ #053B44 - dark green
+
+ Colors used on the site (some are modified):
+ #20201C - dark grey (background)
+ #EAD075 - dark yellow
+ #B9543C - light orange
+ #09AA9F - light green
+ #06736C - darker green (for border and backgrounds)
  **********************************/
 
 * {
@@ -73,7 +88,14 @@ table {
 html {
     background-color: #20201c;
     font-family: "Quattrocento", Georgia, serif;
-    color: #bbb;
+    color: #CCC;
+}
+
+/***********************************
+ Main menu
+ **********************************/
+body {
+    border-top: 0.5em solid #b9543c;
 }
 
 header {
@@ -81,12 +103,47 @@ header {
     margin: 0 auto 1em auto;
 }
 
+#main-nav ul {
+    margin-top: -0.5em;
+}
+
+#main-nav ul li {
+    float: left;
+    width: 25%;
+    padding: 0.5em 1em;
+    border-top: 0.5em solid #B9543C;
+    border-radius: 0 0 0.2em 0.2em;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-nav ul li a {
+    border-bottom: none;
+    color: #CCC;
+}
+
+#main-nav ul li a:hover {
+    color: #09AA9F;
+}
+
+#main-nav ul li.active a {
+    color: white;
+}
+
+#main-nav ul li.active {
+    background-color: #444;
+    border-top-color: #20201C;
+}
+
 h1 {
     font-family: "Passion One", "Impact", sans-serif;
     font-size: 2em; /* 18px * 2 = 36px */
     line-height: 1; /* it should be less for rythm, but overlapping occurs */
     margin-bottom: 0.75em;
-    color: #dd8;
+    color: #EAD075;
     text-shadow: 0 0.05em 0.05em black;
 }
 
@@ -95,30 +152,22 @@ h2 {
     font-size: 1.3333333em; /* 18px * 1.3 = 24px */
     line-height: 1.125; /* 27px */
     margin-bottom: 1.125em;
-}
-
-#main-nav ul li {
-    float: left;
-    width: 25%;
-    font-weight: bold;
-    text-align: center;
-    padding: 1em;
-}
-
-#main-nav ul li a {
-    text-decoration: none;
-}
-
-#main-nav ul li a.active {
-    text-decoration: underline;
+    color: #B9543C;
+    text-shadow: 0 0.05em 0.05em black;
 }
 
 a, a:visited {
-    color: #fff;
+    /* color: #DD531D; */
+    /* text-decoration: none; */
+    /* border-bottom: 1px solid #DD531D; */
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
 }
 
 a:hover, a:focus {
-    text-decoration: none;
+    border-bottom: none;
+    color: #09AA9F;
 }
 
 #intro img {
@@ -172,7 +221,7 @@ article ol {
 article blockquote {
     padding-left: 0.9em;
     font-style: italic;
-    border-left: 0.3em solid #45453c;
+    border-left: 0.3em solid #06736C;
 }
 
 article time {
@@ -205,14 +254,15 @@ article .latest-posts time,
     padding: 0.5em 0;
 
     text-align: center;
-    background-color: #383834;
+    background-color: #41413d;
     border-radius: 0.2em;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .contact-list li a:hover,
 .contact-list li a:focus {
-    background-color: #282824;
+    color: white;
+    background-color: #06736C;
 }
 
 /***********************************
@@ -225,6 +275,7 @@ article .latest-posts time,
     border: 0.5em solid #555;
     line-height: 0;
     margin-bottom: 1.5em;
+    border-radius: 0.2em;
 }
 
 #photo-and-caption #photo img {
@@ -287,10 +338,6 @@ article .latest-posts time,
 
 @media only screen and (min-width: 36em) {
     /* 36em * 16px (default size) = 576px */
-    header {
-        margin: 1em auto;
-    }
-
     #intro {
         position: relative;
     }
@@ -343,12 +390,12 @@ article .latest-posts time,
 @media only screen and (min-width: 42em) {
     /* 42em * 16px (default size) = 672px */
     header {
-        margin: 1em auto 4em;
+        margin: 0em auto 4em;
         /* Firefox adds a very big margin on top. It's a bug and
          * this "overflow: hidden" is a workaround.
          * http://stackoverflow.com/questions/13070630/firefox-body-margin-bug
          */
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     #intro h1 {
