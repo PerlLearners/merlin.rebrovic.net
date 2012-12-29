@@ -351,8 +351,8 @@ article .latest-posts time,
 
     #intro img {
         position: absolute;
-        right: 0;
-        bottom: -30%;
+        right: 5%;
+        bottom: -60%;
         width: 30%;
         z-index: 1;
         margin: 0;
@@ -395,6 +395,11 @@ article .latest-posts time,
 
     #intro h1 {
         font-size: 3.3333333em; /* 18px * 3.3* = 60px */
+    }
+
+    #intro img {
+        bottom: -30%;
+        right: 0;
     }
 
     .column2 {
