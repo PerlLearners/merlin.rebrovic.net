@@ -1,16 +1,108 @@
----
-title: About me
----
+{% extends "base.j2" %}
 
-{% extends "article.j2" %}
+{% block content %}
+<article id="short-bio" class="clearfix">
+<div id="photo-and-caption">
+    <div id="photo">
+        <img src="{{ media_url('img/profile_photo.jpg') }}"
+            alt="Merlin's profile photo" />
+    </div>
+    <p>Interaction designer at Five Minutes. Co-owner of
+    Tardigrada. Team lead at Kad ce Kisa. Wizard engineer.</p>
+</div>
 
-{% block article_content %}
-Twitter bio - Interaction designer at [Five Minutes][1]. Co-owner of
-[Tardigrada][2]. Team lead at [Kad ce Kisa][3]. Wizard engineer.
+<div id="fun-facts">
+    {% filter markdown|typogrify -%}
+Fun facts
+---------
 
-Longer version coming soon. I promise :)
+* Reads one book a week.
+* Jumped out of the plane. Survived. Tried a few more times.
+* Slept under the surface of the Earth. Not a zombie.
+* Danced in front of the 3.500 people. And cameras.
+* Traveled to 14 foreign countries and 2 continents.
+* Never got drunk.
+* Can code AND design.
+* Doesn't own a TV.
+    {%- endfilter %}
+<div>
+</article>
 
-[1]: http://www.fiveminutes.eu
-[2]: http://www.tardigrada.hr
-[3]: http://www.kadcekisa.com
+<article id="long-bio">
+{% filter markdown|typogrify -%}
+A longer version for the curious
+================================
+
+I'm a young guy from Croatia who has too many interests and
+not enough time to indulge in all of them. I love learning and
+applying that knowledge to problem solving. I'm humble and
+satisfied with life, but also very disciplined and proactive.
+
+The "wizard engineer" is a term I coined because I find both
+words describe me in a specific way.
+
+WIZARD
+<blockquote>
+    A person who uses or practices magic that derives from
+    supernatural or occult sources. His powers arise from
+    **his study**, rather than having his magical abilities
+    occur entirely spontaneously.
+</blockquote>
+Many things I do may seem like magic to a lot of people, but
+there's nothing magical about it - just a lot of hard work.
+
+ENGINEER
+<blockquote>
+    A professional concerned with applying scientific
+    knowledge to develop solutions for technical problems.
+</blockquote>
+I'm a science fan. I like to apply psychology to interface
+design as well as computer science to building software.
+
+Professionally
+--------------
+
+I'm currently an interaction designer and a front-end
+developer in [Five Minutes][1]. Web and Mobile is where I
+fight for better use of technology and great user experiences.
+
+I also co-founded a small web and mobile service company
+[Tardigrada][2] a few years ago. It's a bit quieter now, but
+still alive.
+
+While acquiring my computer science degree, what now seems a
+long time ago, I started working as a back-end developer.
+After some time I gravitated towards front-end and really
+liked it. Design is very close to front-end so I managed to
+mix my love for drawing and psychology with user interface
+design. Having worked on a lot of projects, I had to think
+about product development and user experience, and that puts
+me where I am today.
+
+Privately
+---------
+
+The line between private and professional life is pretty
+blurred for me because I really love what I do. That's why my
+private time is also filled with technology and design.
+
+On those occasions when I manage to separate myself from the
+screen I usually hang out with friends and family. I love
+exercising and being outdoors. Over the course of my life I've
+tried different ball and racquet sports, swimming, weight
+training, running, cycling, ice and roller skating, hiking,
+orienteering, spelunking (caving), dancing, archery, white
+water rafting and parachuting. And I'm always eager to try
+something new.
+
+If you managed to get to here, I congratulate you :)
+You should follow me on [Twitter][3].
+
+The profile photo is courtesy of Monika Kovaljesko.
+
+[1]: http://www.fiveminutes.eu/services/ux/
+[2]: http://www.tardigrada.hr/en/
+[3]: https://twitter.com/merlinrebrovic
+{%- endfilter %}
+</article>
 {% endblock %}

@@ -61,7 +61,7 @@ table {
     border-spacing: 0;
 }
 /***********************************
- * end of reset
+ end of reset
  **********************************/
 
 * {
@@ -144,44 +144,44 @@ strong {
     margin-bottom: 1.5em;
 }
 
-article.blog-post {
+article {
     margin: 0 auto;
     max-width: 29em; /* 29em * 18px = 522px */
 }
 
-article.blog-post p,
-article.blog-post ol,
-article.blog-post ul,
-article.blog-post blockquote {
+article p,
+article ol,
+article ul,
+article blockquote {
     margin-bottom: 1.5em;
 }
 
-article.blog-post ol,
-article.blog-post ul {
+article ol,
+article ul {
     margin-left: 1.2em;
 }
 
-article.blog-post ul {
+article ul {
     list-style-type: circle;
 }
 
-article.blog-post ol {
+article ol {
     list-style-type: decimal;
 }
 
-article.blog-post blockquote {
+article blockquote {
     padding-left: 0.9em;
     font-style: italic;
     border-left: 0.3em solid #45453c;
 }
 
-article.blog-post time {
+article time {
     font-size: 0.75em;
     line-height: 2em;
 }
 
 /* TODO: hack, refactor this (generalize) */
-article.blog-post .latest-posts time,
+article .latest-posts time,
 .latest-posts time {
     font-size: 0.75em;
     line-height: 1.5em;
@@ -215,6 +215,39 @@ article.blog-post .latest-posts time,
     background-color: #282824;
 }
 
+/***********************************
+ About me page
+ **********************************/
+#photo-and-caption #photo {
+    overflow: hidden;
+    text-align: center;
+    height: 10em;
+    border: 0.5em solid #555;
+    line-height: 0;
+    margin-bottom: 1.5em;
+}
+
+#photo-and-caption #photo img {
+    width: 100%;
+    margin-top: -3em;
+}
+
+#short-bio,
+#short-bio #photo-and-caption {
+    margin-bottom: 1.5em;
+}
+
+/***********************************
+ Typogrify filter
+ **********************************/
+.caps {
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+}
+
+/***********************************
+ Media queries
+ **********************************/
 @media only screen and (max-width: 22em) {
     #intro h1 br {
         display: none;
@@ -222,6 +255,33 @@ article.blog-post .latest-posts time,
 
     .contact-list li {
         width: 100%;
+    }
+}
+
+@media only screen and (min-width: 30em) {
+    /* 30em * 16px (default size) = 480px */
+    /* profile photo in about me page */
+    #photo-and-caption #photo {
+        height: auto;
+    }
+
+    #photo-and-caption #photo img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #photo-and-caption {
+        float: left;
+        width: 40%;
+        margin-right: 10%;
+    }
+    #fun-facts {
+        float: left;
+        width: 50%;
+    }
+
+    #fun-facts ul {
+        margin-left: 0;
     }
 }
 
@@ -252,7 +312,7 @@ article.blog-post .latest-posts time,
         max-width: none;
     }
 
-    h2 { /* TODO: recalculate and make specific for the homepage */
+    .column2 h2 { /* TODO: recalculate and make specific for the homepage */
         font-size: 2em; /* 18px * 2 = 36px */
         line-height: 0.75; /* 27px */
         margin-bottom: 0.75em; /* 27px */
@@ -266,12 +326,12 @@ article.blog-post .latest-posts time,
         width: auto;
     }
 
-    article.blog-post ul,
-    article.blog-post ol {
+    article ul,
+    article ol {
         margin-left: 0;
     }
 
-    article.blog-post blockquote {
+    article blockquote {
         margin-left: -1.2em;
     }
 
@@ -301,7 +361,7 @@ article.blog-post .latest-posts time,
         padding-right: 1em;
     }
 
-    article.blog-post {
+    article {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
 }
@@ -310,6 +370,36 @@ article.blog-post .latest-posts time,
     /* 60em * 16px (default size) = 960px */
     .column2 ul.latest-posts {
         margin-left: 0;
+    }
+
+    /* about me page */
+    #photo-and-caption #photo {
+        border-width: 0.7em;
+    }
+
+    #photo-and-caption, #fun-facts {
+        float: none;
+        width: auto;
+        margin-right: 0;
+    }
+
+    #short-bio {
+        float: left;
+        width: 13em;
+        margin-right: 4em;
+        /* make the text in the sidebar a bit smaller */
+        font-size: 1em;
+    }
+
+    #long-bio {
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 68em) {
+    #short-bio {
+        width: 16em;
+        margin-left: -3em;
     }
 }
 
