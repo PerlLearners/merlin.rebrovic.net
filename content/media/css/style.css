@@ -391,11 +391,6 @@ article .latest-posts time,
     /* 42em * 16px (default size) = 672px */
     header {
         margin: 0em auto 4em;
-        /* Firefox adds a very big margin on top. It's a bug and
-         * this "overflow: hidden" is a workaround.
-         * http://stackoverflow.com/questions/13070630/firefox-body-margin-bug
-         */
-        /* overflow: hidden; */
     }
 
     #intro h1 {
