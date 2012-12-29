@@ -447,6 +447,12 @@ article .latest-posts time,
         font-size: 1em;
     }
 
+    #short-bio #fun-facts h2 {
+        /* make the heading font the same size
+           as in the main body text */
+        font-size: 1.555em;
+    }
+
     #long-bio {
         float: left;
     }
