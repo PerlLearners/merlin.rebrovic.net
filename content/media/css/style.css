@@ -242,6 +242,10 @@ article .latest-posts time,
 }
 /* end hack - there are some in media queries */
 
+.contact-list {
+    margin-left: -0.2em;
+}
+
 .contact-list li {
     display: block;
     width: 50%;
@@ -304,8 +308,13 @@ article .latest-posts time,
         display: none;
     }
 
+    .contact-list {
+        margin-left: 0;
+    }
+
     .contact-list li {
         width: 100%;
+        padding: 0.2em 0;
     }
 }
 
