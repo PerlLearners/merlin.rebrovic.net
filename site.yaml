@@ -23,9 +23,6 @@ context:
             - name: Blog
               type: node
               url: blog/
-            - name: Projects
-              type: page
-              url: projects.html
 urlcleaner:
     index_file_names:
         - index.html
