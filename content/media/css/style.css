@@ -105,12 +105,13 @@ header {
 
 #main-nav ul {
     margin-top: -0.5em;
+    padding-left: 0.7em;
+    float: left;
 }
 
 #main-nav ul li {
     float: left;
-    width: 25%;
-    padding: 0.5em 1em;
+    padding: 0.7em 0.5em 0.5em 0.5em;
     border-top: 0.5em solid #B9543C;
     border-radius: 0 0 0.2em 0.2em;
 
@@ -320,6 +321,15 @@ article .latest-posts time,
 
 @media only screen and (min-width: 30em) {
     /* 30em * 16px (default size) = 480px */
+    #main-nav ul {
+        float: right;
+    }
+
+    #main-nav ul li {
+        width: auto;
+        padding: 0.5em 1em;
+    }
+
     /* profile photo in about me page */
     #photo-and-caption #photo {
         height: auto;
@@ -335,6 +345,7 @@ article .latest-posts time,
         width: 40%;
         margin-right: 10%;
     }
+
     #fun-facts {
         float: left;
         width: 50%;
@@ -372,14 +383,6 @@ article .latest-posts time,
         font-size: 2em; /* 18px * 2 = 36px */
         line-height: 0.75; /* 27px */
         margin-bottom: 0.75em; /* 27px */
-    }
-
-    #main-nav ul {
-        float: right;
-    }
-
-    #main-nav ul li {
-        width: auto;
     }
 
     article ul,
