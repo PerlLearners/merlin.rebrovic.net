@@ -14,8 +14,7 @@ def init():
     if not os.path.exists(EXTERNAL_MEDIA_PATH):
         external_media_path = os.environ.get("EXTERNAL_MEDIA_PATH")
         if external_media_path is None:
-            print("EXTERNAL_MEDIA_PATH environment variable not set.")
-            sys.exit(1)
+            _print_and_exit("EXTERNAL_MEDIA_PATH environment variable not set.")
         local("ln -s {0} {1}".format(external_media_path,
             EXTERNAL_MEDIA_PATH))
     else:
@@ -32,8 +31,8 @@ def _generate_website(config_type):
     try:
         local("hyde gen -c " + CONFIGURATION[config_type])
     except KeyError:
-        print("Configuration type '" + config_type + "' is not supported.")
-        sys.exit(1)
+        _print_and_exit(
+            "Configuration type '" + config_type + "' is not supported.")
 
 def regen():
     clean()
@@ -64,10 +63,13 @@ def _tweak_website():
 def _upload(dry_run):
     remote_host_and_path = os.environ.get("REMOTE_HOST_AND_PATH")
     if remote_host_and_path is None:
-        print("REMOTE_HOST_AND_PATH environment variable not set.")
-        sys.exit(1)
+        _print_and_exit("REMOTE_HOST_AND_PATH environment variable not set.")
 
     dry_run_flag = ""
     if dry_run:
         dry_run_flag = "n"
     local("rsync -avz{0} deploy/ {1}".format(dry_run_flag, remote_host_and_path))
+
+def _print_and_exit(message):
+    print(message)
+    sys.exit(1)
