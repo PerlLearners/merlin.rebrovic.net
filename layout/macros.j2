@@ -38,3 +38,7 @@
 </ul>
 </nav>
 {%- endmacro %}
+
+{% macro external_image(path, alt) -%}
+<img src="{{ media_url('external') }}/{{ path }}" alt="{{ alt }}" />
+{%- endmacro %}
