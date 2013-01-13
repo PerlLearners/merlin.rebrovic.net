@@ -14,8 +14,8 @@
 </head>
 <body>
     <header>
-    {% import "macros.j2" as macros with context %}
-    {{ macros.render_main_navigation() }}
+    {% from "macros.j2" import render_main_navigation with context %}
+    {{ render_main_navigation() }}
     </header>
 
     <div id="main-content" class="clearfix">
