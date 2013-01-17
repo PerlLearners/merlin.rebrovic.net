@@ -1,3 +1,4 @@
+{% import "macros.j2" as macros with context %}
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -14,7 +15,6 @@
 </head>
 <body>
     <header>
-    {% import "macros.j2" as macros with context %}
     {{ macros.render_main_navigation() }}
     </header>
 

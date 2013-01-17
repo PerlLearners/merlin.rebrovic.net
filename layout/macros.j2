@@ -1,4 +1,4 @@
-{% macro latest_posts(count=None) -%}
+{% macro render_latest_posts(count=None) -%}
 <ul class="latest-posts">
 {# I didn't use sorter provided by grouper plugin because it sorts
    resources inside each group and if I request everything together,
