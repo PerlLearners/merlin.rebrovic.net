@@ -179,6 +179,10 @@ strong {
     font-weight: bold;
 }
 
+em {
+    font-style: italic;
+}
+
 #main-content {
     font-size: 1.125em; /* 16px * 1.125 = 18px */
     line-height: 1.5;
@@ -225,6 +229,10 @@ article blockquote {
 article time {
     font-size: 0.75em;
     line-height: 2em;
+}
+
+article img {
+    width: 100%;
 }
 
 /* TODO: hack, refactor this (generalize) */
