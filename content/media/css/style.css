@@ -238,6 +238,8 @@ article img {
 /* TODO: hack, refactor this (generalize) */
 article .latest-posts time,
 .latest-posts time {
+    padding-right: 1em;
+    font-family: monospace;
     font-size: 0.75em;
     line-height: 1.5em;
 }

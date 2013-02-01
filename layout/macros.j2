@@ -9,10 +9,10 @@
     {% if loop.index > count %}{% break %}{% endif %}
 {% endif %}
 <li>
-    <a href="{{ res.full_url }}">{{ res.meta.title }}</a>
     <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     {{ res.meta.created.strftime('%Y-%m-%d') }}
     </time>
+    <a href="{{ res.full_url }}">{{ res.meta.title }}</a>
 </li>
 {% endfor %}
 </ul>
