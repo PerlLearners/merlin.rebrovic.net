@@ -64,7 +64,7 @@ table {
 /***********************************
  Personal stylesheet
 
- Colors from a original palette:
+ Colors from an original palette:
  #EAD075 - dark yellow
  #B9543C - light orange
  #A53539 - red
@@ -98,6 +98,54 @@ body {
     border-top: 0.5em solid #b9543c;
 }
 
+h1 {
+    font-family: "Passion One", "Impact", sans-serif;
+    font-size: 2em; /* 18px * 2 = 36px */
+    line-height: 1; /* it should be less for rythm, but overlapping occurs */
+    margin-bottom: 0.75em;
+    color: #EAD075;
+    text-shadow: 0 0.05em 0.05em black;
+}
+
+h2 {
+    font-family: "Passion One", "Impact", sans-serif;
+    font-size: 1.3333333em; /* 18px * 1.3 = 24px */
+    line-height: 1.125; /* 27px */
+    margin-bottom: 1.125em;
+    color: #B9543C;
+    text-shadow: 0 0.05em 0.05em black;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+a:hover, a:focus {
+    border-bottom: none;
+    color: #09AA9F;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+#main-content {
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    line-height: 1.5;
+    max-width: 53.3333em; /* 53.3333 * 18px = 960px */
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
+}
+
+/***********************************
+ Header
+ **********************************/
 header {
     max-width: 60em; /* 60 * 16px (default size) = 960px */
     margin: 0 auto 2em auto;
@@ -139,35 +187,9 @@ header {
     border-top-color: #20201C;
 }
 
-h1 {
-    font-family: "Passion One", "Impact", sans-serif;
-    font-size: 2em; /* 18px * 2 = 36px */
-    line-height: 1; /* it should be less for rythm, but overlapping occurs */
-    margin-bottom: 0.75em;
-    color: #EAD075;
-    text-shadow: 0 0.05em 0.05em black;
-}
-
-h2 {
-    font-family: "Passion One", "Impact", sans-serif;
-    font-size: 1.3333333em; /* 18px * 1.3 = 24px */
-    line-height: 1.125; /* 27px */
-    margin-bottom: 1.125em;
-    color: #B9543C;
-    text-shadow: 0 0.05em 0.05em black;
-}
-
-a, a:visited {
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid white;
-}
-
-a:hover, a:focus {
-    border-bottom: none;
-    color: #09AA9F;
-}
-
+/***********************************
+ Homepage
+ **********************************/
 #intro img {
     width: 100%;
     max-width: 10em;
@@ -175,80 +197,21 @@ a:hover, a:focus {
     display: block;
 }
 
-strong {
-    font-weight: bold;
-}
-
-em {
-    font-style: italic;
-}
-
-#main-content {
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
-    line-height: 1.5;
-    max-width: 53.3333em; /* 53.3333 * 18px = 960px */
-    margin: 0 auto;
-    padding: 0 1em 1em 1em;
-}
-
-.column2 {
+.column-half {
     margin-bottom: 1.5em;
 }
 
-article {
-    margin: 0 auto;
-    max-width: 29em; /* 29em * 18px = 522px */
-}
-
-article p,
-article ol,
-article ul,
-article blockquote {
-    margin-bottom: 1.5em;
-}
-
-article ol,
-article ul {
+.column-half ul.latest-posts {
+    list-style-type: circle;
     margin-left: 1.2em;
 }
 
-article ul {
-    list-style-type: circle;
-}
-
-article ol {
-    list-style-type: decimal;
-}
-
-article blockquote {
-    padding-left: 0.9em;
-    font-style: italic;
-    border-left: 0.3em solid #06736C;
-}
-
-article time {
-    font-size: 0.75em;
-    line-height: 2em;
-}
-
-article img {
-    width: 100%;
-}
-
-/* TODO: hack, refactor this (generalize) */
-article .latest-posts time,
 .latest-posts time {
     padding-right: 1em;
     font-family: monospace;
     font-size: 0.75em;
     line-height: 1.5em;
 }
-
-.column2 ul.latest-posts {
-    list-style-type: circle;
-    margin-left: 1.2em;
-}
-/* end hack - there are some in media queries */
 
 .contact-list {
     margin-left: -0.2em;
@@ -275,6 +238,46 @@ article .latest-posts time,
 .contact-list li a:focus {
     color: white;
     background-color: #06736C;
+}
+
+.blog-post {
+    margin: 0 auto;
+    max-width: 29em; /* 29em * 18px = 522px */
+}
+
+.blog-post p,
+.blog-post ol,
+.blog-post ul,
+.blog-post blockquote {
+    margin-bottom: 1.5em;
+}
+
+.blog-post ol,
+.blog-post ul {
+    margin-left: 1.2em;
+}
+
+.blog-post ul {
+    list-style-type: circle;
+}
+
+.blog-post ol {
+    list-style-type: decimal;
+}
+
+.blog-post blockquote {
+    padding-left: 0.9em;
+    font-style: italic;
+    border-left: 0.3em solid #06736C;
+}
+
+.blog-post time {
+    font-size: 0.75em;
+    line-height: 2em;
+}
+
+.blog-post img {
+    width: 100%;
 }
 
 /***********************************
@@ -382,18 +385,18 @@ article .latest-posts time,
         max-width: none;
     }
 
-    .column2 h2 { /* TODO: recalculate and make specific for the homepage */
+    .column-half h2 { /* TODO: recalculate and make specific for the homepage */
         font-size: 2em; /* 18px * 2 = 36px */
         line-height: 0.75; /* 27px */
         margin-bottom: 0.75em; /* 27px */
     }
 
-    article ul,
-    article ol {
+    .blog-post ul,
+    .blog-post ol {
         margin-left: 0;
     }
 
-    article blockquote {
+    .blog-post blockquote {
         margin-left: -1.2em;
     }
 
@@ -417,20 +420,23 @@ article .latest-posts time,
         right: 0;
     }
 
-    .column2 {
+    .column-half {
         float: left;
         width: 50%;
-        padding-right: 1em;
     }
 
-    article {
+    .column-half:first-child {
+        padding-right: 2em;
+    }
+
+    .blog-post {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
 }
 
 @media only screen and (min-width: 60em) {
     /* 60em * 16px (default size) = 960px */
-    .column2 ul.latest-posts {
+    .column-half ul.latest-posts {
         margin-left: 0;
     }
 

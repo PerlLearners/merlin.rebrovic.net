@@ -1,7 +1,7 @@
 {% extends "base.j2" %}
 
 {% block content %}
-<article id="short-bio" class="clearfix">
+<article id="short-bio" class="blog-post clearfix">
 <div id="photo-and-caption">
     <div id="photo">
         <img src="{{ media_url('img/profile_photo.jpg') }}"
@@ -28,7 +28,7 @@ Fun facts
 <div>
 </article>
 
-<article id="long-bio">
+<article id="long-bio" class="blog-post">
 {% filter markdown|typogrify -%}
 A longer version for the curious
 ================================

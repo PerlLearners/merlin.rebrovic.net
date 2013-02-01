@@ -8,8 +8,8 @@
         I make stuff happen.</h1>
     <img src="{{ media_url('img/hat.png') }}" alt="Wizard's hat" />
 </div>
-<div class="clearfix">
-    <div class="column2">
+<div class="grid-row clearfix">
+    <div class="column-half">
         <h2>Latest posts</h2>
         {{ macros.render_latest_posts(count=5) }}
         <br />
@@ -17,7 +17,7 @@
         <a href="http://www.fiveminutes.eu/author/merlin-rebrovic/">
             Five Minutes&rsquo; blog</a>.</p>
     </div>
-    <div class="column2">
+    <div class="column-half">
         <h2>Featured projects</h2>
         <p><a href="/hyde-starter-kit/">
             Hyde Starter Kit</a></p>
