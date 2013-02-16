@@ -9,8 +9,15 @@
             {%- else -%}
                 Wizard engineer
             {%- endif %} | Merlin Rebrović</title>
+{#
+ # Use local fonts for development and host from Google for production.
+ #}
+{% if site.config.mode == "production" -%}
     <link href="http://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+{% else %}
+    <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}">
+{% endif %}
     <link rel="stylesheet" href="{{ media_url('css/style.css') }}?v=3">
 </head>
 <body>
