@@ -45,7 +45,12 @@ def publish(dry_run=False):
     clean()
     _generate_website("production")
     _tweak_website()
+    _remove_local_fonts()
     _upload(dry_run)
+
+def _remove_local_fonts():
+    """ Remove local fonts so they're not uploaded to the production. """
+    local("rm -r deploy/media/fonts")
 
 def _tweak_website():
     """ There are a few tweaks needed for the site and all sub-sites
