@@ -269,6 +269,7 @@ header {
     padding-left: 0.9em;
     font-style: italic;
     border-left: 0.3em solid #06736C;
+    border-radius: 0.2em;
 }
 
 .blog-post time {
