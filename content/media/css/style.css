@@ -240,7 +240,11 @@ header {
     background-color: #06736C;
 }
 
-.blog-post {
+/***********************************
+ Blog posts
+ **********************************/
+.blog-post,
+.read-next {
     margin: 0 auto;
     max-width: 29em; /* 29em * 18px = 522px */
 }
@@ -279,6 +283,11 @@ header {
 
 .blog-post img {
     width: 100%;
+}
+
+.read-next {
+    border-top: 1px solid #555;
+    padding: 1.5em 0;
 }
 
 /***********************************
@@ -430,7 +439,8 @@ header {
         padding-right: 2em;
     }
 
-    .blog-post {
+    .blog-post,
+    .read-next {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
 }

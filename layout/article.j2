@@ -16,6 +16,16 @@
 {% filter markdown|typogrify -%}
     {% block article_content %}{% endblock %}
 {%- endfilter %}
-
 </article>
+
+<p class="read-next">Read this next:<br />
+{% if resource.next_by_latest is not none %}
+     <a href="{{ resource.next_by_latest.full_url }}">
+    {{ resource.next_by_latest.meta.title }}</a>
+{% else %}
+    {% set latest_post = site.content.walk_resources_sorted_by_latest()|first %}
+     <a href="{{ latest_post.full_url }}">
+    {{ latest_post.meta.title }}</a>
+{% endif %}
+</p>
 {% endblock %}

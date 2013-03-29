@@ -30,8 +30,14 @@ urlcleaner:
     strip_extensions:
         - html
 
+sorter:
+    latest:
+        attr: meta.created
+        reverse: True
+
 grouper:
     category:
+        sorter: latest
         description: Blog category
         groups:
             - name: Tech
