@@ -1,5 +1,50 @@
 ---
-title: Blog posts
+title: Blog
 ---
+{% extends "base.j2" %}
 
-{{ macros.render_latest_posts() }}
+{% block content %}
+<article class="asymetrical-columns-left blog-post clearfix">
+    {% filter markdown|typogrify -%}
+I write about technology and design, mostly mobile and web.
+Sometimes I write about people and places I visit.
+
+Most popular posts
+------------------
+
+* [Lorem ipsum]()
+* [Lorem ipsum]()
+* [Lorem ipsum]()
+
+Archives by
+-----------
+
+* [Date]()
+* [Category]()
+    {%- endfilter %}
+<div>
+</article>
+
+<article class="asymetrical-columns-right blog-post">
+    <h2>Latest posts</h2>
+
+{% for res in site.content.walk_resources_sorted_by_latest()[0:2] %}
+{% refer to res.url as post %}
+
+<h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
+    {% if post.image %}
+    <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
+    {% endif %}
+{{ post.excerpt|markdown|typogrify }}
+<a href="{{ content_url(res.url) }}">Read more</a>
+
+<p>
+{% endfor %}
+
+{#
+<div>
+If you want to see more, check out the archives
+</div>
+#}
+</article>
+{% endblock %}

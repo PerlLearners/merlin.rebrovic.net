@@ -122,7 +122,15 @@ a, a:visited {
     border-bottom: 1px solid white;
 }
 
-a:hover, a:focus {
+h1 > a,
+h1 > a:visited {
+    color: #EAD075;
+    border-bottom: none;
+}
+
+a:hover, a:focus,
+h1 > a:hover,
+h1 > a:focus {
     border-bottom: none;
     color: #09AA9F;
 }
@@ -308,8 +316,8 @@ header {
     margin-top: -3em;
 }
 
-#short-bio,
-#short-bio #photo-and-caption {
+.asymetrical-columns-left,
+.asymetrical-columns-left #photo-and-caption {
     margin-bottom: 1.5em;
 }
 
@@ -462,7 +470,7 @@ header {
         margin-right: 0;
     }
 
-    #short-bio {
+    .asymetrical-columns-left {
         float: left;
         width: 13em;
         margin-right: 4em;
@@ -470,19 +478,19 @@ header {
         font-size: 1em;
     }
 
-    #short-bio #fun-facts h2 {
+    .asymetrical-columns-left h2 {
         /* make the heading font the same size
            as in the main body text */
         font-size: 1.555em;
     }
 
-    #long-bio {
+    .asymetrical-columns-right {
         float: left;
     }
 }
 
 @media only screen and (min-width: 68em) {
-    #short-bio {
+    .asymetrical-columns-left {
         width: 16em;
         margin-left: -3em;
     }
