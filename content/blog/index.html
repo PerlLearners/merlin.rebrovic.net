@@ -5,7 +5,7 @@ title: Blog
 
 {% block content %}
 <article class="asymetrical-columns-left blog-post clearfix">
-    {% filter markdown|typogrify -%}
+{% filter markdown|typogrify -%}
 I write about technology and design, mostly mobile and web.
 Sometimes I write about people and places I visit.
 
@@ -21,7 +21,7 @@ Archives by
 
 * [Date]()
 * [Category]()
-    {%- endfilter %}
+{%- endfilter %}
 <div>
 </article>
 
@@ -32,13 +32,19 @@ Archives by
 {% refer to res.url as post %}
 
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
-    {% if post.image %}
-    <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
-    {% endif %}
-{{ post.excerpt|markdown|typogrify }}
-<a href="{{ content_url(res.url) }}">Read more</a>
 
-<p>
+{% if post.excerpt %} {# Excerpt #}
+    {% set res_url = content_url(res.url) %}
+    {% if post.image %}
+    <a href="{{ res_url }}">{{ post.image|markdown }}</a>
+    {% endif %}
+
+    {{ [post.excerpt, " [Read more](", res_url, ")"]
+       |join("")|markdown|typogrify }}
+
+{% else %}{# Whole article #}
+    {{ post.article_content|markdown|typogrify }}
+{% endif %}
 {% endfor %}
 
 {#

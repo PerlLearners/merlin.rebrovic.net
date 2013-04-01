@@ -14,7 +14,9 @@
 {%- endif %}
 
 {% filter markdown|typogrify -%}
+    {% mark article_content -%}
     {% block article_content %}{% endblock %}
+    {%- endmark %}
 {%- endfilter %}
 </article>
 
