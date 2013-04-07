@@ -18,9 +18,10 @@
     {% block article_content %}{% endblock %}
     {%- endmark %}
 {%- endfilter %}
+<hr>
 </article>
 
-<p class="read-next">Read this next:<br />
+<p class="reading-block">Read this next:<br />
 {% if resource.next_by_latest is not none %}
      <a href="{{ resource.next_by_latest.full_url }}">
     {{ resource.next_by_latest.meta.title }}</a>

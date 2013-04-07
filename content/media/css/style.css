@@ -252,8 +252,7 @@ header {
  Major reading blocks on the page
  (blog posts, about me)
  **********************************/
-.reading-block,
-.read-next {
+.reading-block {
     margin: 0 auto;
     max-width: 29em; /* 29em * 18px = 522px */
 }
@@ -294,9 +293,10 @@ header {
     width: 100%;
 }
 
-.read-next {
+.reading-block hr {
+    border: none;
     border-top: 1px solid #555;
-    padding: 1.5em 0;
+    margin: 1.5em 0;
 }
 
 /***********************************
@@ -448,8 +448,7 @@ header {
         padding-right: 2em;
     }
 
-    .reading-block,
-    .read-next {
+    .reading-block {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
 }
