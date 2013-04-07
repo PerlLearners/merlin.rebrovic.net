@@ -4,7 +4,7 @@ title: Blog
 {% extends "base.j2" %}
 
 {% block content %}
-<article class="asymetrical-columns-left blog-post clearfix">
+<article class="asymetrical-columns-left reading-block clearfix">
 {% filter markdown|typogrify -%}
 I write about technology and design, mostly mobile and web.
 Sometimes I write about people and places I visit.
@@ -25,7 +25,7 @@ Archives by
 <div>
 </article>
 
-<article class="asymetrical-columns-right blog-post">
+<article class="asymetrical-columns-right reading-block">
     <h2>Latest posts</h2>
 
 {% for res in site.content.walk_resources_sorted_by_latest()[0:2] %}

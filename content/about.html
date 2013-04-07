@@ -1,7 +1,7 @@
 {% extends "base.j2" %}
 
 {% block content %}
-<article class="asymetrical-columns-left blog-post clearfix">
+<article class="asymetrical-columns-left reading-block clearfix">
 <div id="photo-and-caption">
     <div id="photo">
         <img src="{{ media_url('img/profile_photo.jpg') }}"
@@ -28,7 +28,7 @@ Fun facts
 <div>
 </article>
 
-<article class="asymetrical-columns-right blog-post">
+<article class="asymetrical-columns-right reading-block">
 {% filter markdown|typogrify -%}
 A longer version for the curious
 ================================

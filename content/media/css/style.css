@@ -249,47 +249,48 @@ header {
 }
 
 /***********************************
- Blog posts
+ Major reading blocks on the page
+ (blog posts, about me)
  **********************************/
-.blog-post,
+.reading-block,
 .read-next {
     margin: 0 auto;
     max-width: 29em; /* 29em * 18px = 522px */
 }
 
-.blog-post p,
-.blog-post ol,
-.blog-post ul,
-.blog-post blockquote {
+.reading-block p,
+.reading-block ol,
+.reading-block ul,
+.reading-block blockquote {
     margin-bottom: 1.5em;
 }
 
-.blog-post ol,
-.blog-post ul {
+.reading-block ol,
+.reading-block ul {
     margin-left: 1.2em;
 }
 
-.blog-post ul {
+.reading-block ul {
     list-style-type: circle;
 }
 
-.blog-post ol {
+.reading-block ol {
     list-style-type: decimal;
 }
 
-.blog-post blockquote {
+.reading-block blockquote {
     padding-left: 0.9em;
     font-style: italic;
     border-left: 0.3em solid #06736C;
     border-radius: 0.2em;
 }
 
-.blog-post time {
+.reading-block time {
     font-size: 0.75em;
     line-height: 2em;
 }
 
-.blog-post img {
+.reading-block img {
     width: 100%;
 }
 
@@ -409,12 +410,12 @@ header {
         margin-bottom: 0.75em; /* 27px */
     }
 
-    .blog-post ul,
-    .blog-post ol {
+    .reading-block ul,
+    .reading-block ol {
         margin-left: 0;
     }
 
-    .blog-post blockquote {
+    .reading-block blockquote {
         margin-left: -1.2em;
     }
 
@@ -447,7 +448,7 @@ header {
         padding-right: 2em;
     }
 
-    .blog-post,
+    .reading-block,
     .read-next {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
