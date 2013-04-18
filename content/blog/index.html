@@ -16,11 +16,8 @@ Most popular posts
 * [Are you an expert?]([[blog/are-you-an-expert.html]])
 * [Three days to Sydney, part one]([[blog/three-days-to-sydney-part-one.html]])
 
-Archives by
------------
-
-* [Date]()
-* [Category]()
+[Archive]([[blog/archive.html]]) - if you're interested in
+older posts or looking for something specific.
 {%- endfilter %}
 <div>
 </article>
@@ -47,10 +44,10 @@ Archives by
 {% endif %}
 {% endfor %}
 
-{#
-<div>
-If you want to see more, check out the archives
-</div>
-#}
+<hr>
+<p>
+    If you want to read more, check out the
+    <a href="{{ content_url("blog/archive.html") }}">archive</a>.
+</p>
 </article>
 {% endblock %}
