@@ -25,7 +25,7 @@ older posts or looking for something specific.
 <article class="asymetrical-columns-right reading-block">
     <h2>Latest posts</h2>
 
-{% for res in site.content.walk_resources_sorted_by_latest()[0:2] %}
+{% for res in site.content.walk_resources_sorted_by_latest()[0:5] %}
 {% refer to res.url as post %}
 
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
