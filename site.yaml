@@ -24,6 +24,8 @@ context:
             - name: Blog
               type: node
               url: blog/
+    providers:
+        most_popular: most_popular.yaml
 urlcleaner:
     index_file_names:
         - index.html

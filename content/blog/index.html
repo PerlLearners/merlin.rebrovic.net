@@ -5,31 +5,27 @@ title: Blog
 
 {% block content %}
 <article class="asymetrical-columns-left reading-block clearfix">
-{% filter markdown|typogrify -%}
-I write about technology and design, mostly mobile and web.
-Sometimes I write about people and places I visit.
+<p>I write about technology and design, mostly mobile and web.
+Sometimes I write about people and places I visit.</p>
 
-Most popular posts
-------------------
+<h2>Most popular posts</h2>
+<ul>
+    {% for post in most_popular.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
 
-* [Ego - designers and programmers]([[blog/ego-designers-programmers.html]])
-* [Are you an expert?]([[blog/are-you-an-expert.html]])
-* [Three days to Sydney, part one]([[blog/three-days-to-sydney-part-one.html]])
-
-[Archive]([[blog/archive.html]]) - if you're interested in
-older posts or looking for something specific.
-{%- endfilter %}
-<div>
+<p><a href="{{ content_url("blog/archive.html") }}">Archive</a>
+- if you're interested in older posts or looking for something specific.</p>
 </article>
 
 <article class="asymetrical-columns-right reading-block">
-    <h2>Latest posts</h2>
+<h2>Latest posts</h2>
 
 {% for res in site.content.walk_resources_sorted_by_latest()[0:5] %}
 {% refer to res.url as post %}
 
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
-
 {% if post.excerpt %} {# Excerpt #}
     {% set res_url = content_url(res.url) %}
     {% if post.image %}
