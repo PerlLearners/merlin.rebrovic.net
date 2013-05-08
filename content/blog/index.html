@@ -38,9 +38,9 @@ Sometimes I write about people and places I visit.</p>
 {% else %}{# Whole article #}
     {{ post.article_content|markdown|typogrify }}
 {% endif %}
+<hr>
 {% endfor %}
 
-<hr>
 <p>
     If you want to read more, check out the
     <a href="{{ content_url("blog/archive.html") }}">archive</a>.
