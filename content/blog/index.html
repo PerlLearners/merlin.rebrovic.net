@@ -23,7 +23,7 @@ Sometimes I write about people and places I visit.</p>
 <h2>Latest posts</h2>
 
 {% for res in site.content.walk_resources_sorted_by_latest()[0:5] %}
-{% refer to res.url as post %}
+{% refer to res.relative_path as post %}
 
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
 {% if post.excerpt %} {# Excerpt #}

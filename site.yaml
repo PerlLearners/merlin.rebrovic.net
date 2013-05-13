@@ -4,11 +4,11 @@ media_url: /media
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
-    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.meta.AutoExtendPlugin
+    - hyde.ext.plugins.meta.SorterPlugin
+    - hyde.ext.plugins.meta.GrouperPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
-    - hyde.ext.plugins.sorter.SorterPlugin
-    - hyde.ext.plugins.grouper.GrouperPlugin
-    - hyde.ext.plugins.textlinks.TextlinksPlugin
+    - hyde.ext.plugins.text.TextlinksPlugin
 meta:
     nodemeta: meta.yaml
     ga_tracking_code: UA-21972762-1
