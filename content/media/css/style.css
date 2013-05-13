@@ -306,10 +306,8 @@ header {
     overflow: hidden;
     text-align: center;
     height: 10em;
-    border: 0.5em solid #555;
     line-height: 0;
     margin-bottom: 1.5em;
-    border-radius: 0.2em;
 }
 
 #photo-and-caption #photo img {
