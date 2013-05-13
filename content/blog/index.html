@@ -28,10 +28,6 @@ Sometimes I write about people and places I visit.</p>
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
 {% if post.excerpt %} {# Excerpt #}
     {% set res_url = content_url(res.url) %}
-    {% if post.image %}
-    <a href="{{ res_url }}">{{ post.image|markdown }}</a>
-    {% endif %}
-
     {{ [post.excerpt, " [Read more](", res_url, ")"]
        |join("")|markdown|typogrify }}
 
