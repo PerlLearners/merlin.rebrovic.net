@@ -11,7 +11,8 @@ Sometimes I write about people and places I visit.</p>
 <h2>Most popular posts</h2>
 <ul>
     {% for post in most_popular.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% set post_url = content_url(post.url) %}
+    <li><a href="{{ post_url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
