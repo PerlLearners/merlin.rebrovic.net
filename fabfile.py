@@ -41,6 +41,10 @@ def regen():
 def serve():
     local("hyde serve")
 
+def dev():
+    regen()
+    serve()
+
 def publish(dry_run=False):
     clean()
     _generate_website("production")
