@@ -1,0 +1,27 @@
+---
+title: Vim plugin - Focus.vim
+---
+
+{% extends "base.j2" %}
+
+{% block content %}
+<article class="reading-block">
+<h1>Focus.vim</h1>
+
+{% filter markdown|typogrify %}
+<img src="/media/external/focus.gif"
+     alt="Animated explanation of Focus.vim plugin." />
+
+A wide screen gives a lot of space in Vim, but what's the
+point if all content is on the far left side instead in the
+center? And if you have multiple windows opened, wouldn't it
+be nice if you could quickly clear everything out and focus
+only on one window in full screen, work for a bit and then
+easily go back with all other windows restored? Focus.vim does
+exactly that.
+
+Get the plugin from [GitHub][1] and give it a try.
+
+[1]: https://github.com/merlinrebrovic/focus.vim
+{% endfilter %}
+{% endblock %}
