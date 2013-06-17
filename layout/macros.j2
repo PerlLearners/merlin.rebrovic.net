@@ -24,9 +24,7 @@
             site.content.node_from_relative_path(item.url)) -%}
     {%- endif %}
     <li {% if active %}class="active"{% endif %}><a
-        href="{{ content_url(item.url) }}{% if item.type == 'node' %}/{% endif %}">
-        {{ item.name }}
-    </a></li>
+        href="{{ content_url(item.url) }}">{{ item.name }}</a></li>
     {% endfor %}
 </ul>
 </nav>

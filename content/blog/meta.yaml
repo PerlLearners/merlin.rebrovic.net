@@ -1,2 +1,3 @@
 extends: article.j2
 default_block: article_content
+blog_post: True

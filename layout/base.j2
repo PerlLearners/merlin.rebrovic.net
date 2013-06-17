@@ -26,7 +26,20 @@
     </header>
 
     <div id="main-content" class="clearfix">
+    {# This check was introduced when Hyde started using Jinja 2.7
+       which broke this website. More details about the issue:
+       https://github.com/mitsuhiko/jinja2/pull/84#issuecomment-19208621
+
+       Lakshmi suggested:
+         * Differentiate the listing page from the content pages
+         * Use an alternate root block for content pages
+         * Call the block instead of declaring it in base template
+     #}
+    {% if not resource.meta.blog_post %}
     {% block content %}{% endblock %}
+    {% else %}
+    {{ self.blog_post() }}
+    {% endif %}
     </div>
 
 {% if site.config.mode == "production" -%}
