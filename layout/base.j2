@@ -18,7 +18,8 @@
 {% else %}
     <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}">
 {% endif %}
-    <link rel="stylesheet" href="{{ media_url('css/style.css') }}?v=3">
+{% set cssfile = site.content.resource_from_relative_path('media/css/style.css') %}
+    <link rel="stylesheet" href="{{ cssfile.full_url }}?v={{ cssfile.meta.content_hash }}">
 </head>
 <body>
     <header>

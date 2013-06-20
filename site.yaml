@@ -9,6 +9,7 @@ plugins:
     - hyde.ext.plugins.meta.GrouperPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.text.TextlinksPlugin
+    - hash.HashPlugin
 meta:
     nodemeta: meta.yaml
     ga_tracking_code: UA-21972762-1
@@ -52,3 +53,6 @@ grouper:
               description: Psychology, education and motivation
             - name: Travel
               description: World exploration
+
+hasher:
+    - media/css/style.css
