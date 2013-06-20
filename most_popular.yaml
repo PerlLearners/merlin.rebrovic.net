@@ -1,7 +1,3 @@
-posts:
-    - title: Sketch 365 - A Designer's Quest
-      url: blog/sketch-365.html
-    - title: Ego - designers and programmers
-      url: blog/ego-designers-programmers.html
-    - title: Are you an expert?
-      url: blog/are-you-an-expert.html
+- sketch-365.html
+- ego-designers-programmers.html
+- are-you-an-expert.html
