@@ -1,14 +1,17 @@
 # -- coding: utf-8 --
 import os
 import sys
-from fabric.api import local
+from fabric.api import local, task
 
 CONFIGURATION = { "development": "site.yaml",
                   "production" : "prod.yaml" }
 EXTERNAL_MEDIA_PATH = "content/media/external"
 
+@task
 def init():
-    """Install dependencies and create a symlink from an
+    """Set up the project and environment.
+
+    Install dependencies and create a symlink from an
     external media storage to Hyde's media folder for easier
     development and deployment.
     """
@@ -20,13 +23,17 @@ def init():
         local("ln -s {0} {1}".format(external_media_path,
             EXTERNAL_MEDIA_PATH))
     else:
-        print("A link to external media already exists.")
+        print("A link to an external media already exists.")
 
+@task
 def clean():
+    """Remove locally generated website."""
     if os.path.exists("deploy"):
         local("rm -r deploy")
 
+@task
 def gen():
+    """Generate a development version."""
     _generate_website("development")
 
 def _generate_website(config_type):
@@ -36,18 +43,26 @@ def _generate_website(config_type):
         _print_and_exit(
             "Configuration type '" + config_type + "' is not supported.")
 
+@task
 def regen():
+    """Remove an old and generate a new website."""
     clean()
     gen()
 
+@task
 def serve():
+    """Serve the website locally."""
     local("hyde serve")
 
+@task
 def dev():
+    """Clean, generate and serve."""
     regen()
     serve()
 
+@task
 def publish(dry_run=False):
+    """Generate with production settings and upload."""
     clean()
     _generate_website("production")
     _tweak_website()
