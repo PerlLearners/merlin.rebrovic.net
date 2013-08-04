@@ -167,7 +167,6 @@ header {
 
 #main-nav ul li {
     float: left;
-    padding: 0.7em 0.5em 0.5em 0.5em;
     border-top: 0.5em solid #B9543C;
     border-radius: 0 0 0.2em 0.2em;
 
@@ -178,11 +177,14 @@ header {
 }
 
 #main-nav ul li a {
+    padding: 0.7em 0.5em 0.5em 0.5em;
     border-bottom: none;
     color: #CCC;
+    display: block;
 }
 
-#main-nav ul li a:hover {
+#main-nav ul li a:hover,
+#main-nav ul li a:focus {
     color: #09AA9F;
 }
 
@@ -348,8 +350,7 @@ header {
 
 @media only screen and (min-width: 30em) {
     /* 30em * 16px (default size) = 480px */
-    #main-nav ul li {
-        width: auto;
+    #main-nav ul li a {
         padding: 0.5em 1em;
     }
 
