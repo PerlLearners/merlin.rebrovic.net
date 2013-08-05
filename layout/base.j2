@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}" type="text/css">
 {% endif %}
 {% set cssfile = site.content.resource_from_relative_path('media/css/style.css') %}
-    <link rel="stylesheet" href="{{ cssfile.full_url }}?v={{ cssfile.meta.content_hash }}"type="text/css">
+    <link rel="stylesheet" href="{{ cssfile.full_url }}?v={{ cssfile.meta.content_hash }}" type="text/css">
 </head>
 <body>
     <header>
