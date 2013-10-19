@@ -1,0 +1,53 @@
+---
+title: Git tips and tricks
+created: !!timestamp '2013-11-04'
+category: Tech
+---
+
+{% mark excerpt %}
+{{ macros.external_image("2013-11-04_git_machine.jpg",
+"Sketch of a steampunk Git machine.") }}
+
+In a few short years Git became one of the most popular source
+control management system, especially for newly started and
+open source projects. If you're a developer, you'll eventually
+cross paths with it. I've written a post on Git tips and
+tricks on Five Minutes' blog, starting from beginner and
+progressing to more advanced levels. You can find it on the
+link below.
+
+* [Git tips and tricks](http://www.fiveminutes.eu/git-tips-and-tricks/)
+
+There are six tips there and I'm providing number seven here
+as a bonus.
+{% endmark %}
+
+## Release notes from commit messages
+
+If you're using a [well formated commit message][format] (one
+short summary line, one empty and then a longer description),
+it's very easy to create simple, but effective release notes.
+For example, if you released the v1.3 of your product, the
+command
+
+<code>
+git log --pretty=format:"%s" --no-merges v1.2..v1.3
+</code>
+
+will print out summary lines from v1.2 (excluding) to v1.3 and
+leave out merge commits. Perfect for saving to a wiki, sending
+to a <abbr title="Quality Assurance">QA</abbr> team or a client
+for a review.
+
+## Other Git resources
+
+There are two more posts I wrote about Git two years ago. If
+you managed to get to here, you may also find them helpful.
+
+* [Cut your way through problems with git bisect][bisect]
+* [Git merge and rebase - the simple explanation][merge]
+
+
+[format]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[bisect]: http://www.fiveminutes.eu/cut-your-way-through-problems-with-git-bisect/
+[merge]: http://www.fiveminutes.eu/git-merge-and-rebase-the-simple-explanation/
