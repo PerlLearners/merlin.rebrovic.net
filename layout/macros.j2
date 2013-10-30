@@ -35,3 +35,15 @@
 {% macro external_image(path, alt) -%}
 <img src="{{ media_url('external') }}/{{ path }}" alt="{{ alt }}" />
 {%- endmacro %}
+
+{# docs: https://dev.twitter.com/docs/embedded-tweets #}
+{% macro embed_tweet(content, username, tweet_id, timestamp) -%}
+<blockquote class="twitter-tweet"
+            data-link-color="#06736C" {# light green #}
+            data-dnt="true"> {# don't use Twitter tailoring and tracking #}
+    <p>{{ content }}</p>
+    &mdash; @{{ username }}
+    <a href="https://twitter.com/{{ username }}/status/{{ tweet_id }}">{{ timestamp }}</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{%- endmacro %}
