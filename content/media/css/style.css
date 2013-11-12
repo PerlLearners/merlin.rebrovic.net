@@ -311,6 +311,21 @@ header {
     margin: 1.5em 0;
 }
 
+.responsive-embedded-container {
+    position: relative;
+    padding-bottom: 56%; /* best default for 16:9 videos */
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+
+.responsive-embedded-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /***********************************
  About me page
  **********************************/
