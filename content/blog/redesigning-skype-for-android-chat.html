@@ -1,0 +1,177 @@
+---
+title: Redesigning Skype for Android Chat
+created: !!timestamp '2014-02-18'
+category: Design
+---
+
+{% mark excerpt %}
+The third [World Information Architecture Day][wiad] took
+place on February 15 by organizing local events around the
+world. UX Passion organized it for [the first time in
+Zagreb][wiadhr]. I was invited to speak about iOS and Android
+design guidelines.
+
+[wiad]: http://worldiaday.org/
+[wiadhr]: http://www.wiad.hr/
+
+I presented a few examples of good and bad navigation
+decisions on both platforms. Skype for Android chat was used
+as a "somewhere in the middle" example where I suggested
+another (IMHO better) solution. I would like to expand on that
+example and explain my thought process. _Please note that my
+only focus is layout and navigation of the chat screen, not
+overall performance and user experience._
+{% endmark %}
+
+Here is the current chat screen for reference:
+
+{{ macros.external_image("2014-02-18_skype_old.png",
+"Current Skype chat on Android.") }}
+
+## Problems
+
+1. Action bar looks out of place with a non-standard Up arrow
+   and a centered title. But that's just a minor detail.
+
+2. The bottom blue bar is a continuation of the Action bar,
+   but it has only two icons that could fit at the top.
+   Official guidelines allow this pattern, but it has been
+   avoided because it often shows too many icons not needed at
+   the moment. Also, with the on-screen navigation menu (like
+   here) it's easy to accidentally press Home or Back button.
+
+3. That blue bottom bar hides itself when you start typing,
+   but if you select any text, contextual actions are rendered
+   in the same bar which then overlays the actual selection.
+   Those actions are usually present on the top Action bar.
+   <p>
+   {{ macros.external_image("2014-02-18_skype_text_select.png",
+   "Text selection shows a toolbar with actions that hides
+   all other content and makes it unusable.") }}</p>
+
+4. Send and Emoticons buttons are too close, made more
+   problematic by Emoticons icon being very small.
+
+5. Something not visible from the screenshot is navigation. Up
+   and Back buttons do the same thing, get you back to the
+   list of chats. That's OK if you came from there, but if
+   you've landed on a specific chat from a notification or
+   somewhere else, Back button should return you where you
+   were before, even if it was a different application. To
+   make matters worse, top right Chat icon--that turns orange
+   when there are new messages--also returns you to the list
+   of chats. Now you have three controls on the screen
+   _navigating to the same destination._
+   <p>
+   {{ macros.external_image("2014-02-18_skype_navigation.png",
+   "Three navigation controls leading to the same screen.") }}</p>
+
+6. When you tap three dots in the current chat, you get
+   _contact actions_. I'm not sure why they are needed here;
+   it makes more sense to have them on the contact's profile
+   screen or list of contacts.
+   <p>
+   {{ macros.external_image("2014-02-18_skype_actionoverflow_old.png",
+   "Unnecessary actions.") }}</p>
+
+How did all of that happen? Let's try to find out.
+
+## Influence by other platforms
+
+Let's look at Windows Phone and iPhone.
+
+{{ macros.external_image("2014-02-18_skype_wp_ios.png",
+"Windows Phone and iPhone versions of Skype chat.") }}
+
+Both versions are conforming to their respective platform
+guidelines. But does iPhone's top Navigation bar looks
+familiar? Or Windows' bottom blue bar with video and audio
+calls? Or even the "plus, type a message here, emoticons" row?
+
+No wonder Android looks like Frankenstein's monster assembled
+from spare parts. Let's try to fix that.
+
+## Action bar
+
+* Use Up button with an icon that changes when new messages
+  are present.
+* Screen title is to the left leaving some space for
+  main actions. If the screen is smaller, they will be pushed
+  to action overflow.
+* All action overflow items should be removed except "View
+  profile".
+* Old Chat icon is not needed anymore.
+
+I didn't modify any visuals on purpose; I just wanted to
+change layout and information architecture. That being said,
+having a blue or light gray background and switching from
+Segoe UI Bold to a lighter typeface--or even system
+font--could look better and less clutered on Android.
+
+Before:
+{{ macros.external_image("2014-02-18_skype_actionbar_old.png",
+"") }}
+
+After:
+{{ macros.external_image("2014-02-18_skype_actionbar_new.png",
+"") }}
+{{ macros.external_image("2014-02-18_skype_actionbar_notification.png",
+"") }}
+
+## Message input area
+
+* The bottom blue bar is obsolete and can be removed.
+* Everything can be pushed down leaving more space for
+  content.
+* Leave the input area a bit higher to make the touch target
+  bigger.
+
+The plus icon is problematic. It opens a pop-up with actions
+like "Send file", "Take photo" or "Add participants". It
+doesn't seem to me they are used regularly, especially on a
+mobile phone. But I'm not sure, I'm just assuming. It's there
+on Windows Phone, but hidden on iPhone (top right icon).
+
+If this was a real redesign and I had enough time, I would
+wire up some analytics and wait until I get statistically
+significant results. Let's assume for now users don't use
+those actions too much. In that case, we can push it to action
+overflow. Emoticon icon can be enlarged and moved to the other
+side; there shouldn't be any accidental taps now.
+
+Before:
+{{ macros.external_image("2014-02-18_skype_bottom_old.png",
+"") }}
+
+After:
+{{ macros.external_image("2014-02-18_skype_bottom_new.png",
+"") }}
+
+## Complete solution
+
+Here is the complete solution with the action overflow opened.
+
+{{ macros.external_image("2014-02-18_skype_new.png",
+"Redesigned Skype chat on Android.") }}
+
+## Conclusion
+
+Transferring patterns from other platforms is the cause of
+many problems. Some of them are:
+
+* Users don't find the app familiar and have to invest more
+  time to learn navigation and behavior. And it always stands
+  out like a black sheep.
+* It's usually harder for engineers to recreate non-standard
+  patterns in code. It takes more time to develop with more
+  bugs--both mean more money wasted.
+
+There are so many ways to positively impact user experience
+and innovate without messing with navigation and information
+architecture. For a communication application it could be
+speed, sound and video quality, resilience to crashing and
+dropping calls, cross-platform and cross-device usage.
+
+The general advice is to use what platform provides in 95% of
+the cases; it's easier not to make a mistake that way. If you
+need to deviate, do it with a purpose and a valid reason.
