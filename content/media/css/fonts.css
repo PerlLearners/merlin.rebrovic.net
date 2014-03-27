@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Passion One';
+  font-family: 'Source Sans Pro';
   font-style: normal;
-  font-weight: 400;
-  src: local('Passion One'), local('PassionOne-Regular'),
-      url({{ media_url('fonts/Passion_One.woff') }}) format('woff');
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url
+      url({{ media_url('fonts/Source_Sans_Pro_Black.woff') }}) format('woff');
 }
 
 @font-face {
