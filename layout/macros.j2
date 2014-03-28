@@ -13,8 +13,8 @@
 </ul>
 {%- endmacro %}
 
-{% macro render_main_navigation() -%}
-<nav id="main-nav" class="clearfix">
+{% macro render_main_navigation(element_id="") -%}
+<nav id="{{ element_id }}" class="clearfix">
 <ul class="clearfix">
     {% for item in menu %}
     {% set active = False -%}

@@ -18,7 +18,10 @@
 </head>
 <body>
     <header>
-    {{ macros.render_main_navigation() }}
+    <div id="top" class="clearfix">
+        <a href="#bottom-nav">Menu</a>
+    </div>
+    {{ macros.render_main_navigation("top-nav") }}
     </header>
 
     <div id="main-content" class="clearfix">
@@ -37,6 +40,7 @@
     {{ self.blog_post() }}
     {% endif %}
     </div>
+    {{ macros.render_main_navigation("bottom-nav") }}
 
 {% if site.config.mode == "production" %}
 {% include "fonts.j2" %}

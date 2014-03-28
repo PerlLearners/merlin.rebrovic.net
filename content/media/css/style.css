@@ -104,10 +104,6 @@ html {
 /***********************************
  Main menu
  **********************************/
-body {
-    border-top: 0.5em solid #b9543c;
-}
-
 h1 {
     font-family: "Source Sans Pro", "Impact", sans-serif;
     font-weight: 900;
@@ -167,45 +163,99 @@ em {
  **********************************/
 header {
     max-width: 60em; /* 60 * 16px (default size) = 960px */
-    margin: 0 auto 2em auto;
+    margin: 0 auto 1em auto;
 }
 
-#main-nav ul {
-    margin-top: -0.5em;
+#top {
     padding: 0 0.7em;
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
+}
+
+#top a {
+    padding: 0.7em 1em 0.5em 1em;
+    color: white;
+    background-color: #444;
+    display: block;
+    float: right;
+    border-bottom: 0.3em solid #b9543c;
+}
+
+#top a:hover,
+#top a:focus {
+    background-color: #06736C;
+    transition: background-color 300ms;
+}
+
+#top-nav {
+    display: none;
+}
+
+#top-nav ul {
+    padding: 0 0.7em;
+    margin-top: 0.5em;
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
     float: right;
 }
 
-#main-nav ul li {
+#top-nav ul li {
     float: left;
-    border-top: 0.5em solid #B9543C;
-    border-radius: 0 0 0.2em 0.2em;
-
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: bold;
     text-align: center;
 }
 
-#main-nav ul li a {
+#top-nav ul li a {
     padding: 0.7em 0.5em 0.5em 0.5em;
     border-bottom: none;
     color: #CCC;
     display: block;
 }
 
-#main-nav ul li a:hover,
-#main-nav ul li a:focus {
+#top-nav ul li a:hover,
+#top-nav ul li a:focus {
     color: #09AA9F;
 }
 
-#main-nav ul li.active a {
+#top-nav ul li.active {
+    border-bottom: 0.3em solid #b9543c;
+}
+
+#top-nav ul li.active a {
     color: white;
 }
 
-#main-nav ul li.active {
-    background-color: #444;
-    border-top-color: #20201C;
+#bottom-nav {
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
+}
+
+#bottom-nav ul {
+    border-top: 1px solid #555;
+}
+
+#bottom-nav ul li a {
+    padding: 0.7em 0 0.5em 0.5em;
+    border-left: 0.5em solid transparent;
+    border-bottom: 1px solid #555;
+    color: #CCC;
+    display: block;
+}
+
+#bottom-nav ul li a:hover,
+#bottom-nav ul li a:focus {
+    color: white;
+    background-color: #06736C;
+    transition: background-color 300ms, color 300ms;
+}
+
+#bottom-nav ul li.active a {
+    border-left: 0.5em solid #B9543C;
+}
+
+#bottom-nav ul li.active a:hover,
+#bottom-nav ul li.active a:focus {
+    border-left: 0.5em solid #06736C;
+    transition: border-color 300mx;
 }
 
 /***********************************
@@ -259,7 +309,6 @@ header {
     padding: 0.5em 0;
 
     text-align: center;
-    border-radius: 0.2em;
     border-bottom: none;
     background-color: #41413d;
     transition: background-color 300ms;
@@ -304,7 +353,6 @@ header {
     padding-left: 0.9em;
     font-style: italic;
     border-left: 0.3em solid #06736C;
-    border-radius: 0.2em;
 }
 
 .reading-block time {
@@ -377,8 +425,16 @@ header {
 
 @media only screen and (min-width: 30em) {
     /* 30em * 16px (default size) = 480px */
-    #main-nav ul li a {
-        padding: 0.5em 1em;
+    header {
+        margin-bottom: 2em;
+    }
+
+    #top-nav {
+        display: block;
+    }
+
+    #bottom-nav, #top {
+        display: none;
     }
 
     /* homepage */
@@ -430,6 +486,10 @@ header {
 
 @media only screen and (min-width: 36em) {
     /* 36em * 16px (default size) = 576px */
+    #top-nav ul li a {
+        padding: 0.7em 1em 0.5em 1em;
+    }
+
     #intro h1 {
         font-size: 2.6666667em; /* 18px * 2.6 = 48px */
         margin-bottom: 0.5em;
@@ -461,6 +521,11 @@ header {
     /* 42em * 16px (default size) = 672px */
     header {
         margin: 0em auto 4em;
+    }
+
+    #top-nav ul {
+        font-size: 1.3125em; /* 16px * 1.3124 = 21px */
+        margin-top: 1em;
     }
 
     #intro h1 {
