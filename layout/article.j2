@@ -3,15 +3,14 @@
 {% block blog_post %}
 <article class="reading-block">
 
-{% if resource.meta.created -%}
-<time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-    {{ resource.meta.created.strftime('%Y-%m-%d') }}
-</time>
-{%- endif %}
-
-{% if resource.meta.title -%}
 <h1>{{ resource.meta.title }}</h1>
-{%- endif %}
+<div class="post-meta">
+    Posted on
+    <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+    {{ resource.meta.created.strftime('%Y-%m-%d') }}
+    </time> in
+    <span>{{ resource.meta.category }}</span>
+</div>
 
 {% filter markdown|typogrify -%}
     {% mark article_content -%}

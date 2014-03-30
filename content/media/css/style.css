@@ -109,7 +109,6 @@ h1 {
     font-weight: 900;
     font-size: 2em; /* 18px * 2 = 36px */
     line-height: 1; /* it should be less for rythm, but overlapping occurs */
-    margin-bottom: 0.75em;
     color: #EAD075;
     text-shadow: 0 0.05em 0.05em black;
 }
@@ -265,6 +264,10 @@ header {
     position: relative;
 }
 
+#intro h1 {
+    margin-bottom: 0.75em;
+}
+
 #intro img {
     width: 100%;
     max-width: 10em;
@@ -283,13 +286,6 @@ header {
 .column-half ul.latest-posts {
     list-style-type: circle;
     margin-left: 1.2em;
-}
-
-.latest-posts time {
-    padding-right: 1em;
-    font-family: monospace;
-    font-size: 0.75em;
-    line-height: 1.5em;
 }
 
 .contact-list {
@@ -355,11 +351,6 @@ header {
     border-left: 0.3em solid #06736C;
 }
 
-.reading-block time {
-    font-size: 0.75em;
-    line-height: 2em;
-}
-
 .reading-block img {
     max-width: 100%;
 }
@@ -368,6 +359,13 @@ header {
     border: none;
     border-top: 1px solid #555;
     margin: 1.5em 0;
+}
+
+.reading-block .post-meta {
+    font-size: 0.75em;
+    line-height: 2em;
+    color: #AAA;
+    margin-bottom: 1em;
 }
 
 .responsive-embedded-container {
@@ -404,6 +402,19 @@ header {
 .asymetrical-columns-left,
 .asymetrical-columns-left #photo-and-caption {
     margin-bottom: 1.5em;
+}
+
+/***********************************
+ Archive
+ **********************************/
+.latest-posts li {
+    position: relative;
+}
+
+.latest-posts .meta {
+    font-size: 0.75em;
+    line-height: 2em;
+    color: #AAA;
 }
 
 /***********************************
@@ -482,6 +493,19 @@ header {
     #fun-facts ul {
         margin-left: 0;
     }
+
+    /* archive */
+    .latest-posts .meta {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+    }
+
+    .latest-posts .meta time {
+        display: inline-block;
+        width: 60%;
+    }
 }
 
 @media only screen and (min-width: 36em) {
@@ -551,6 +575,15 @@ header {
 
     .column-half:first-child {
         padding-right: 2em;
+    }
+
+    .column-half .latest-posts .meta {
+        position: static;
+        width: 100%;
+    }
+
+    .column-half .latest-posts .meta time {
+        width: auto;
     }
 
     .reading-block {

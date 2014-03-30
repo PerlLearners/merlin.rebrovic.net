@@ -29,6 +29,14 @@ Sometimes I write about people and places I visit.</p>
 {% refer to res.relative_path as post %}
 
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
+<div class="post-meta">
+    Posted on
+    <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+    {{ res.meta.created.strftime('%Y-%m-%d') }}
+    </time> in
+    <span>{{ res.meta.category }}</span>
+</div>
+
 {% if post.excerpt %} {# Excerpt #}
     {% set res_url = content_url(res.url) %}
     {{ [post.excerpt, " [Read more](", res_url, ")"]
