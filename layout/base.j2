@@ -19,7 +19,7 @@
 <body>
     <header>
     <div id="top" class="clearfix">
-        <a href="#bottom-nav">Menu</a>
+        <a href="#bottom-nav">Menu &#x25bc;</a>
     </div>
     {{ macros.render_main_navigation("top-nav") }}
     </header>
@@ -41,6 +41,7 @@
     {% endif %}
     </div>
     {{ macros.render_main_navigation("bottom-nav") }}
+    <a href="#top" class="back-to-top">Back to top &#x25b2;</a>
 
 {% if site.config.mode == "production" %}
 {% include "fonts.j2" %}

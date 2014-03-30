@@ -225,7 +225,7 @@ header {
     font-size: 1.125em; /* 16px * 1.125 = 18px */
     line-height: 1.5;
     margin: 0 auto;
-    padding: 0 1em 1em 1em;
+    padding: 0 1em;
 }
 
 #bottom-nav ul {
@@ -241,7 +241,9 @@ header {
 }
 
 #bottom-nav ul li a:hover,
-#bottom-nav ul li a:focus {
+#bottom-nav ul li a:focus,
+.back-to-top:hover,
+.back-to-top:focus {
     color: white;
     background-color: #06736C;
     transition: background-color 300ms, color 300ms;
@@ -255,6 +257,17 @@ header {
 #bottom-nav ul li.active a:focus {
     border-left: 0.5em solid #06736C;
     transition: border-color 300mx;
+}
+
+.back-to-top {
+    display: block;
+    margin: 0.5em 1em 1em 1em;
+    padding: 0.7em 0 0.5em 1em;
+    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    line-height: 1.5;
+    color: #CCC;
+    background-color: #444;
+    border-bottom: none;
 }
 
 /***********************************
@@ -450,7 +463,9 @@ header {
         display: block;
     }
 
-    #bottom-nav, #top {
+    #bottom-nav,
+    #top,
+    .back-to-top {
         display: none;
     }
 
