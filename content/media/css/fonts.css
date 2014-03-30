@@ -2,8 +2,8 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 900;
-  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url
-      url({{ media_url('fonts/Source_Sans_Pro_Black.woff') }}) format('woff');
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'),
+       url({{ media_url('fonts/Source_Sans_Pro_Black.woff') }}) format('woff');
 }
 
 @font-face {
@@ -11,5 +11,5 @@
   font-style: normal;
   font-weight: 400;
   src: local('Quattrocento'),
-      url({{ media_url('fonts/Quattrocento.woff') }}) format('woff');
+       url({{ media_url('fonts/Quattrocento.woff') }}) format('woff');
 }
