@@ -19,6 +19,22 @@
 <body>
     <header>
     <div id="top" class="clearfix">
+
+        {# Current location #}
+        {% for item in menu %}
+        {% set active = False -%}
+        {% if item.type == 'page' -%}
+            {% set active = (resource.url ==
+                site.content.resource_from_relative_path(item.url).url) -%}
+        {% else -%}
+            {% set active = (node ==
+                site.content.node_from_relative_path(item.url)) -%}
+        {%- endif %}
+        {% if active %}
+        <span class="current-location">Location: {{ item.name }}</span>
+        {% endif %}
+        {% endfor %}
+
         <a href="#bottom-nav">Menu &#x25bc;</a>
     </div>
     {{ macros.render_main_navigation("top-nav") }}

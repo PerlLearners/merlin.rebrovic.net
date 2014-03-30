@@ -166,8 +166,14 @@ header {
 }
 
 #top {
-    padding: 0 0.7em;
+    padding: 0 1em;
     font-size: 1.125em; /* 16px * 1.125 = 18px */
+}
+
+#top .current-location {
+    color: #AAA;
+    position: relative;
+    top: 0.8em;
 }
 
 #top a {
