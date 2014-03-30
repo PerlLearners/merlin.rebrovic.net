@@ -18,20 +18,26 @@
 {% macro render_main_navigation(element_id="") -%}
 <nav id="{{ element_id }}" class="clearfix">
 <ul class="clearfix">
-    {% for item in menu %}
-    {% set active = False -%}
-    {% if item.type == 'page' -%}
-        {% set active = (resource.url ==
-            site.content.resource_from_relative_path(item.url).url) -%}
-    {% else -%}
-        {% set active = (node ==
-            site.content.node_from_relative_path(item.url)) -%}
-    {%- endif %}
-    <li {% if active %}class="active"{% endif %}><a
-        href="{{ content_url(item.url) }}">{{ item.name }}</a></li>
-    {% endfor %}
+    {% call(menu_item, is_active) run_through_menu() %}
+    <li {% if is_active %}class="active"{% endif %}><a
+        href="{{ content_url(menu_item.url) }}">{{ menu_item.name }}</a></li>
+    {% endcall %}
 </ul>
 </nav>
+{%- endmacro %}
+
+{% macro run_through_menu() -%}
+    {% for menu_item in menu %}
+    {% set is_active = False -%}
+    {% if menu_item.type == 'page' -%}
+        {% set is_active = (resource.url ==
+            site.content.resource_from_relative_path(menu_item.url).url) -%}
+    {% else -%}
+        {% set is_active = (node ==
+            site.content.node_from_relative_path(menu_item.url)) -%}
+    {%- endif %}
+    {{ caller(menu_item, is_active) }}
+    {% endfor %}
 {%- endmacro %}
 
 {% macro external_image(path, alt) -%}

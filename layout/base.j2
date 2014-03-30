@@ -21,19 +21,9 @@
     <div id="top" class="clearfix">
 
         {# Current location #}
-        {% for item in menu %}
-        {% set active = False -%}
-        {% if item.type == 'page' -%}
-            {% set active = (resource.url ==
-                site.content.resource_from_relative_path(item.url).url) -%}
-        {% else -%}
-            {% set active = (node ==
-                site.content.node_from_relative_path(item.url)) -%}
-        {%- endif %}
-        {% if active %}
-        <span class="current-location">Location: {{ item.name }}</span>
-        {% endif %}
-        {% endfor %}
+        {% call(menu_item, is_active) macros.run_through_menu() %}
+        {% if is_active %}<span class="current-location">Location: {{ menu_item.name }}</span>{% endif %}
+        {% endcall %}
 
         <a href="#bottom-nav">Menu &#x25bc;</a>
     </div>
