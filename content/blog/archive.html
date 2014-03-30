@@ -5,8 +5,30 @@ blog_post: False
 {% extends "base.j2" %}
 
 {% block content %}
-<article class="reading-block">
-    <h1>Archive</h1>
-    {{ macros.render_latest_posts() }}
+<article class="reading-block archive">
+
+{% set year = 0 %}
+{% for res in site.content.walk_resources_sorted_by_latest() %}
+
+{# If the next post is from the previous year, start a new section #}
+{% if res.meta.created.year != year %}
+    {% if year != 0 %}</ul>{% endif %}
+    {% set year = res.meta.created.year %}
+    <h1>{{ year }}</h1>
+    <ul class="latest-posts">
+{% endif %}
+
+<li>
+    <div class="title">
+        <a href="{{ res.full_url }}">{{ res.meta.title }}</a>
+    </div>
+    <div class="meta">
+        <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+        {{ res.meta.created.strftime('%Y-%m-%d') }}</time>
+        <span>{{ res.meta.category }}</span>
+    </div>
+</li>
+{% endfor %}
+
 </article>
 {% endblock %}

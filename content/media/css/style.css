@@ -407,6 +407,12 @@ header {
 /***********************************
  Archive
  **********************************/
+.archive h1 {
+    border-bottom: 1px solid #888;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.3em;
+}
+
 .latest-posts li {
     position: relative;
 }
@@ -649,6 +655,10 @@ header {
 
     .asymetrical-columns-right {
         float: left;
+    }
+
+    .archive h1 {
+        margin-left: -3em;
     }
 }
 
