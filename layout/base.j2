@@ -5,10 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if resource.meta.title -%}
-                {{ resource.meta.title }}
-            {%- else -%}
-                Wizard engineer
-            {%- endif %} | Merlin Rebrović</title>
+                {{ resource.meta.title }} - {% endif %}Merlin Rebrović</title>
 {% if site.config.mode == "development" -%}
     {# Use local fonts for development. #}
     <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}" type="text/css">
