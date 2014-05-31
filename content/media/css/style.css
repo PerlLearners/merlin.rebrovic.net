@@ -126,7 +126,7 @@ a, a:visited {
     color: white;
     text-decoration: none;
     border-bottom: 1px solid #555;
-    transition: color 300ms;
+    transition: color 150ms;
 }
 
 h1 > a,
@@ -188,7 +188,7 @@ header {
 #top a:hover,
 #top a:focus {
     background-color: #06736C;
-    transition: background-color 300ms;
+    transition: background-color 150ms;
 }
 
 #top-nav {
@@ -252,7 +252,7 @@ header {
 .back-to-top:focus {
     color: white;
     background-color: #06736C;
-    transition: background-color 300ms, color 300ms;
+    transition: background-color 150ms, color 150ms;
 }
 
 #bottom-nav ul li.active a {
@@ -262,7 +262,7 @@ header {
 #bottom-nav ul li.active a:hover,
 #bottom-nav ul li.active a:focus {
     border-left: 0.5em solid #06736C;
-    transition: border-color 300mx;
+    transition: border-color 150ms;
 }
 
 .back-to-top {
@@ -326,7 +326,7 @@ header {
     text-align: center;
     border-bottom: none;
     background-color: #41413d;
-    transition: background-color 300ms;
+    transition: background-color 150ms;
 }
 
 .contact-list li a:hover,
