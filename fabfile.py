@@ -5,25 +5,6 @@ from fabric.api import local, task
 
 CONFIGURATION = { "development": "site.yaml",
                   "production" : "prod.yaml" }
-EXTERNAL_MEDIA_PATH = "content/media/external"
-
-@task
-def init():
-    """Set up the project and environment.
-
-    Install dependencies and create a symlink from an
-    external media storage to Hyde's media folder for easier
-    development and deployment.
-    """
-    local("pip install -r requirements.txt")
-    if not os.path.exists(EXTERNAL_MEDIA_PATH):
-        external_media_path = os.environ.get("EXTERNAL_MEDIA_PATH")
-        if external_media_path is None:
-            _print_and_exit("EXTERNAL_MEDIA_PATH environment variable not set.")
-        local("ln -s {0} {1}".format(external_media_path,
-            EXTERNAL_MEDIA_PATH))
-    else:
-        print("A link to an external media already exists.")
 
 @task
 def clean():
