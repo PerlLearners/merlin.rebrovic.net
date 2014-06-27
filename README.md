@@ -10,7 +10,7 @@ Setup
 Make sure you have `pip` installed.
 
     pip install -r requirements.txt
-    ln -s content/media/external /path/to/local/images
+    ln -s /path/to/local/images content/media/external
     fab dev
 
 Before publishing put this in your `.bashrc`:
