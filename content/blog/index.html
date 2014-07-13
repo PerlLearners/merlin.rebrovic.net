@@ -28,6 +28,7 @@ Sometimes I write about people and places I visit.</p>
 {% for res in site.content.walk_resources_sorted_by_latest()[0:5] %}
 {% refer to res.relative_path as post %}
 
+<article class="excerpt">
 <h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
 <div class="post-meta">
     Posted on
@@ -42,10 +43,10 @@ Sometimes I write about people and places I visit.</p>
     {{ [post.excerpt, " [Read more](", res_url, ")"]
        |join("")|markdown|typogrify }}
 
-{% else %}{# Whole article #}
+{% else %} {# Whole article #}
     {{ post.article_content|markdown|typogrify }}
 {% endif %}
-<hr>
+</article>
 {% endfor %}
 
 <p>

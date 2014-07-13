@@ -374,6 +374,10 @@ header {
     max-width: 100%;
 }
 
+.reading-block .excerpt {
+    margin-bottom: 3em;
+}
+
 .reading-block .post-meta {
     font-size: 0.75em;
     line-height: 2em;
