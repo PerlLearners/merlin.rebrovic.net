@@ -17,8 +17,9 @@
     {% block article_content %}{% endblock %}
     {%- endmark %}
 {%- endfilter %}
-<hr>
 </article>
+
+<hr class="reading-block">
 
 <p class="reading-block">Read this next:<br />
 {% if resource.next_by_latest is not none %}
