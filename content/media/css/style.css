@@ -154,7 +154,7 @@ em {
     line-height: 1.5;
     max-width: 53.3333em; /* 53.3333 * 18px = 960px */
     margin: 0 auto;
-    padding: 0 1em 1em 1em;
+    padding: 0 1em 1.5em 1em;
 }
 
 /***********************************
