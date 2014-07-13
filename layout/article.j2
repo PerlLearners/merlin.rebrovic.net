@@ -4,13 +4,13 @@
 <article class="reading-block">
 
 <h1>{{ resource.meta.title }}</h1>
-<div class="post-meta">
+<p class="post-meta">
     Posted on
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
     {{ resource.meta.created.strftime('%Y-%m-%d') }}
     </time> in
     <span>{{ resource.meta.category }}</span>
-</div>
+</p>
 
 {% filter markdown|typogrify -%}
     {% mark article_content -%}
