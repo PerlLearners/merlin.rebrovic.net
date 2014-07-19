@@ -447,6 +447,17 @@ hr.reading-block {
 }
 
 /***********************************
+ Speaking
+ **********************************/
+.speaking h1 {
+    margin-bottom: 0.75em;
+}
+
+.speaking h2 {
+    margin-bottom: 0em;
+}
+
+/***********************************
  Typogrify filter
  **********************************/
 .caps {
