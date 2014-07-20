@@ -6,10 +6,18 @@ blog_post: False
 
 {% block content %}
 <article class="asymetrical-columns-left reading-block speaking clearfix">
-    This is a full list of all public talks and
+    <p>This is a full list of all public talks and
     workshops I did over the last few years.
     <a href="#bio">My short bio and a link to a profile photo</a>
-    can be found at the bottom of the page.
+    can be found at the bottom of the page.</p>
+
+    <div id="speaking-photo">
+        <img src="{{ media_url('img/speaking.jpg') }}"
+            alt="Merlin's profile photo" /></div>
+
+    <span style="font-size: 0.8em;">Image credits:
+        <a href="https://www.facebook.com/photo.php?fbid=247330788755376">
+        WebCamp Zagreb</a></span>
 </article>
 
 <article class="asymetrical-columns-right speaking reading-block">

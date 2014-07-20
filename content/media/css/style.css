@@ -457,6 +457,15 @@ hr.reading-block {
     margin-bottom: 0em;
 }
 
+#speaking-photo {
+    overflow: hidden;
+    height: 10em;
+}
+
+#speaking-photo img {
+    width: auto;
+}
+
 /***********************************
  Typogrify filter
  **********************************/
@@ -635,6 +644,10 @@ hr.reading-block {
     .reading-block {
         font-size: 1.1666667em; /* 18px * 1.16* = 21px */
     }
+
+    #speaking-photo {
+        height: 14em;
+    }
 }
 
 @media only screen and (min-width: 52em) {
@@ -699,6 +712,15 @@ hr.reading-block {
 
     .archive h1 {
         margin-left: -3em;
+    }
+
+    #speaking-photo {
+        height: auto;
+    }
+
+    #speaking-photo img {
+        margin-left: -4em;
+        max-width: none;
     }
 }
 
