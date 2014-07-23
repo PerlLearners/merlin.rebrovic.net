@@ -97,6 +97,7 @@ abbr {
 html {
     background-color: #20201c;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: "Quattrocento", Georgia, serif;
     color: #CCC;
 }
