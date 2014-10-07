@@ -348,6 +348,7 @@ header {
 .reading-block p,
 .reading-block ol,
 .reading-block ul,
+.reading-block pre,
 .reading-block blockquote {
     margin-bottom: 1.5em;
 }
