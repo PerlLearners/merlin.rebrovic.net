@@ -1,0 +1,27 @@
+---
+title: Git alias
+created: !!timestamp '2014-10-07'
+category: Tech
+---
+
+A couple of people asked me about aliases from my Git
+workshop, so here are those we used. Just put them in your
+<code>.gitconfig</code> and feel free to modify them for your
+own workflow.
+
+    [alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        d = diff
+        l = log --graph --oneline --decorate
+
+The last alias can be improved with a timestamp and an author
+in the same line, but you have to use custom formating:
+<code>l = log --graph --pretty=format:\"%C(yellow)%h%Cred%d%Creset %s
+%Cblue(%ar) %Cgreen%an\"</code>
+
+There are also some [Git tips and tricks][1] I shared late last year.
+
+[1]: [[ blog/git-tips-and-tricks.html ]]
