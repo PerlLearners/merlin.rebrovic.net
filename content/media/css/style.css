@@ -648,7 +648,7 @@ hr.reading-block {
     }
 
     #speaking-photo {
-        height: 14em;
+        height: auto;
     }
 }
 
@@ -721,7 +721,7 @@ hr.reading-block {
     }
 
     #speaking-photo img {
-        margin-left: -4em;
+        margin-left: -7em;
         max-width: none;
     }
 }
