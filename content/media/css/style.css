@@ -548,6 +548,9 @@ hr.reading-block {
     }
 
     /* archive */
+    .latest-posts .title {
+        width: 65%;
+    }
     .latest-posts .meta {
         position: absolute;
         right: 0;
