@@ -13,8 +13,8 @@
 </p>
 
 {% filter markdown|typogrify -%}
-    {% mark article_content -%}
-    {% block article_content %}{% endblock %}
+    {% mark full_article_content -%}
+        {% block article_content %}{% endblock %}
     {%- endmark %}
 {%- endfilter %}
 </article>

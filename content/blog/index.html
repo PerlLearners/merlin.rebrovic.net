@@ -44,7 +44,7 @@ Sometimes I write about people and places I visit.</p>
        |join("")|markdown|typogrify }}
 
 {% else %} {# Whole article #}
-    {{ post.article_content|markdown|typogrify }}
+    {{ post.full_article_content|markdown|typogrify }}
 {% endif %}
 </article>
 {% endfor %}
