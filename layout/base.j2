@@ -46,9 +46,9 @@ a stranger and say "Hi" on https://twitter.com/merlinrebrovic :)
          * Call the block instead of declaring it in base template
      #}
     {% if not resource.meta.blog_post %}
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
     {% else %}
-    {{ self.blog_post() }}
+        {{ self.blog_post() }}
     {% endif %}
     </div>
     {{ macros.render_main_navigation("bottom-nav") }}
