@@ -1,17 +1,11 @@
 ---
-title: Vim plugin - Focus.vim
+title: Focus.vim plugin
+created: !!timestamp '2013-06-18'
+category: News
 ---
 
-{% extends "base.j2" %}
-
-{% block content %}
-<article class="reading-block">
-<h1>Focus.vim</h1>
-<br> {# TODO: fix me in CSS #}
-
-{% filter markdown|typogrify %}
-<img src="/media/external/focus.gif"
-     alt="Animated explanation of Focus.vim plugin." />
+{{ macros.external_image("focus.gif",
+"Animated explanation of Focus.vim plugin.") }}
 
 A wide screen gives a lot of space in Vim, but what's the
 point if all content is on the far left side instead in the
@@ -24,5 +18,3 @@ exactly that.
 Get the plugin from [GitHub][1] and give it a try.
 
 [1]: https://github.com/merlinrebrovic/focus.vim
-{% endfilter %}
-{% endblock %}
