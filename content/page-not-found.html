@@ -1,0 +1,21 @@
+---
+title: Page not found
+---
+{% extends "base.j2" %}
+
+{% block content %}
+<article class="reading-block">
+<h1>Page not found :(</h1>
+<br>
+{% filter markdown|typogrify -%}
+The page you're looking for is apparently not here. Either I
+had moved things around carelessly or someone made a typo in a
+URL. If you're looking for a specific blog post, try searching
+for it by title in the [archive][] or start fresh from the
+[homepage][].
+
+[archive]: [[ blog/archive.html ]]
+[homepage]: [[ / ]]
+{%- endfilter %}
+</article>
+{% endblock %}

@@ -5,3 +5,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 # Add .html extension to everything else
 RewriteRule ^(([^/]+/)*[^./]+)/?$ /$1.html [L]
+
+ErrorDocument 404 /page-not-found.html
