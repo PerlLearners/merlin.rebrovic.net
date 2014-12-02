@@ -19,7 +19,7 @@
 <nav id="{{ element_id }}" class="clearfix">
 <ul class="clearfix">
     {% call(menu_item, is_active) run_through_menu() %}
-    <li {% if is_active %}class="active"{% endif %}><a
+    <li{% if is_active %} class="active"{% endif %}><a
         href="{{ content_url(menu_item.url) }}">{{ menu_item.name }}</a></li>
     {% endcall %}
 </ul>
