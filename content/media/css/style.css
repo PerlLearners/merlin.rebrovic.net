@@ -106,7 +106,7 @@ html {
  Main menu
  **********************************/
 h1 {
-    font-family: "Source Sans Pro", "Impact", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 900;
     font-size: 2em; /* 18px * 2 = 36px */
     line-height: 1; /* it should be less for rythm, but overlapping occurs */
