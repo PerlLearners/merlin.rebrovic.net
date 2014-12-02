@@ -54,3 +54,4 @@ grouper:
 
 hasher:
     - media/css/style.css
+    - media/js/app.js

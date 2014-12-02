@@ -52,11 +52,11 @@ a stranger and say "Hi" on https://twitter.com/merlinrebrovic :)
     {% endif %}
     </div>
     {{ macros.render_main_navigation("bottom-nav") }}
-    <a href="#top" class="back-to-top">Back to top &#x25b2;</a>
+    <a data-action="track-event" data-gacategory="Navigation"
+       data-gaaction="Back to top"
+       href="#top" class="back-to-top">Back to top &#x25b2;</a>
 
-{% if site.config.mode == "production" %}
-{% include "fonts.j2" %}
-{% include "ga.j2" %}
-{% endif %}
+{% set jsfile = site.content.resource_from_relative_path('media/js/app.js') %}
+<script src="{{ jsfile.full_url }}?v={{ jsfile.meta.content_hash }}"></script>
 </body>
 </html>
