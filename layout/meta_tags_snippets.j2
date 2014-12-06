@@ -1,0 +1,34 @@
+{# Meta tags for social and search snippets
+
+   Twitter cards - https://dev.twitter.com/cards/types/summary-large-image
+   Open Graph Protocol for Facebook and Google+ - http://ogp.me/
+   Microdata for Google Search - http://schema.org/Article
+#}
+    <meta itemprop="name"
+          property="og:title"
+          name="twitter:title"
+          content="{{ resource.meta.title }}">
+{% if resource.meta.short_description %}
+    <meta itemprop="description"
+          property="og:description"
+          name="twitter:description"
+          content="{{ resource.meta.short_description }}">
+{% endif %}
+{% if resource.meta.cover_photo %}
+    <meta itemprop="image"
+          property="og:image"
+          name="twitter:image:src"
+          content="http://merlin.rebrovic.net{{ media_url(resource.meta.cover_photo) }}">
+{% endif %}
+    <meta itemprop="url"
+          property="og:url"
+          content="http://merlin.rebrovic.net{{ resource.full_url }}" />
+    <meta itemprop="datePublished"
+          property="article:published_time"
+          content="{{ resource.meta.created }}" />
+    <meta itemprop="articleSection"
+          property="article:section"
+          content="{{ resource.meta.category }}" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@merlinrebrovic">
+    <meta property="og:type" content="article" />

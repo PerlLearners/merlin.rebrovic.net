@@ -8,12 +8,12 @@ is also a nice place to check out the building blocks.
 I also tweet about design and (mostly) front-end engineering, so don't be
 a stranger and say "Hi" on https://twitter.com/merlinrebrovic :)
 -->
-<html lang="en">
+<html lang="en"{% if resource.meta.blog_post %} itemscope itemtype="http://schema.org/Article" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"{% endif %}>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if resource.meta.title -%}
-                {{ resource.meta.title }} — {% endif %}Merlin Rebrović</title>
+    <title>{% if resource.meta.title %}{{ resource.meta.title }} — {% endif %}Merlin Rebrović</title>
+{% if resource.meta.blog_post %}{% include "meta_tags_snippets.j2" %}{% endif %}
 {% if site.config.mode == "development" -%}
     {# Use local fonts for development. #}
     <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}" type="text/css">
