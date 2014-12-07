@@ -3,7 +3,7 @@
 {% block blog_post %}
 <article class="reading-block">
 
-<h1>{{ resource.meta.title }}</h1>
+<h1 itemprop="headline">{{ resource.meta.title }}</h1>
 <p class="post-meta">
     Posted on
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
@@ -12,11 +12,13 @@
     <span>{{ resource.meta.category }}</span>
 </p>
 
+<div itemprop="articleBody">
 {% filter markdown|typogrify -%}
     {% mark full_article_content -%}
         {% block article_content %}{% endblock %}
     {%- endmark %}
 {%- endfilter %}
+</div>
 </article>
 
 <hr class="reading-block">
