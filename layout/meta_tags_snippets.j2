@@ -14,11 +14,11 @@
           name="twitter:description"
           content="{{ resource.meta.short_description }}">
 {% endif %}
-{% if resource.meta.cover_photo %}
+{% if resource.meta.cover_image %}
     <meta itemprop="image"
           property="og:image"
           name="twitter:image:src"
-          content="http://merlin.rebrovic.net{{ media_url(resource.meta.cover_photo) }}">
+          content="http://merlin.rebrovic.net{{ media_url(resource.meta.cover_image) }}">
 {% endif %}
     <meta itemprop="url"
           property="og:url"
