@@ -18,11 +18,11 @@
     <meta itemprop="image"
           property="og:image"
           name="twitter:image:src"
-          content="http://merlin.rebrovic.net{{ media_url(resource.meta.cover_image) }}">
+          content="{{ website_url }}{{ media_url(resource.meta.cover_image) }}">
 {% endif %}
     <meta itemprop="url"
           property="og:url"
-          content="http://merlin.rebrovic.net{{ resource.full_url }}" />
+          content="{{ website_url }}{{ resource.full_url }}" />
     <meta itemprop="datePublished"
           property="article:published_time"
           content="{{ resource.meta.created }}" />
