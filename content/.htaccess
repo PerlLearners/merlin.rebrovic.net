@@ -9,6 +9,17 @@ RewriteRule ^(([^/]+/)*[^./]+)/?$ /$1.html [L]
 ErrorDocument 404 /page-not-found.html
 
 # taken from https://github.com/h5bp/server-configs-apache/blob/master/src/web_performance/expires_headers.conf
+# ----------------------------------------------------------------------
+# | Expires headers |
+# ----------------------------------------------------------------------
+# Serve resources with far-future expires headers.
+#
+# (!) If you don't control versioning with filename-based
+# cache busting, you should consider lowering the cache times
+# to something like one week.
+#
+# https://httpd.apache.org/docs/current/mod/mod_expires.html
+
 <IfModule mod_expires.c>
     ExpiresActive on
     ExpiresDefault                                      "access plus 1 month"
