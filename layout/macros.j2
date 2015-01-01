@@ -44,6 +44,13 @@
 <img src="{{ media_url('external') }}/{{ path }}" alt="{{ alt }}" />
 {%- endmacro %}
 
+{% macro external_figure(path, caption) -%}
+<figure>
+<img src="{{ media_url('external') }}/{{ path }}" />
+<figcaption class="figure-caption">{{ caption }}</figcaption>
+</figure>
+{%- endmacro %}
+
 {# docs: https://dev.twitter.com/docs/embedded-tweets #}
 {% macro embed_tweet(content, username, tweet_id, timestamp) -%}
 <blockquote class="twitter-tweet"

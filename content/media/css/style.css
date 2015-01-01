@@ -27,7 +27,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
+    isplay: block;
 }
 
 body {
@@ -348,6 +348,7 @@ header {
 .reading-block p,
 .reading-block ol,
 .reading-block ul,
+.reading-block figure,
 .reading-block pre,
 .reading-block blockquote {
     margin-bottom: 1.5em;
@@ -374,6 +375,11 @@ header {
 
 .reading-block img {
     max-width: 100%;
+}
+
+.reading-block .figure-caption {
+    font-size: 0.75em;
+    color: #AAA;
 }
 
 .reading-block .excerpt {
@@ -727,12 +733,29 @@ hr.reading-block {
         margin-left: -7em;
         max-width: none;
     }
+
+    figure {
+        position: relative;
+    }
+
+    figcaption {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        left: -10em;
+        width: 8em;
+    }
 }
 
 @media only screen and (min-width: 68em) {
     .asymetrical-columns-left {
         width: 16em;
         margin-left: -3em;
+    }
+
+    figcaption {
+        left: -12em;
+        width: 10em;
     }
 }
 
