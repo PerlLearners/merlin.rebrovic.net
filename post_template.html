@@ -1,6 +1,6 @@
 ---
 title: Template
-created: !!timestamp '2014-01-01'
+created: !!timestamp '2015-01-01'
 category: Design
 category: News
 category: People
@@ -17,6 +17,9 @@ short_description:
 {{ macros.external_image("image_name.jpg",
 "Image description.") }}
 
+{{ macros.external_figure("image_name.jpg",
+"Figure caption.") }}
+
 This is a blog post template. It forms a basic structure and
 contains all elements that can go into a blog post. My
 thinking was that it's much quicker to remove what's not
@@ -24,5 +27,5 @@ needed than to search and remember where I used something.
 {% endmark %}
 
 {{ macros.embed_tweet("tweet content",
-"author_username", "tweet_id", "date") }}
+"author_username", "tweet_id", "YYYY-MM-DD") }}
 #}
