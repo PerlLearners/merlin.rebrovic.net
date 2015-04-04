@@ -44,6 +44,10 @@
 <img src="{{ media_url('external') }}/{{ path }}" alt="{{ alt }}" />
 {%- endmacro %}
 
+{% macro external_wide_image(path, alt) -%}
+<img class="wide" src="{{ media_url('external') }}/{{ path }}" alt="{{ alt }}" />
+{%- endmacro %}
+
 {% macro external_figure(path, caption) -%}
 <figure>
 <img src="{{ media_url('external') }}/{{ path }}" />

@@ -721,6 +721,17 @@ hr.reading-block {
         float: left;
     }
 
+    .reading-block img.wide {
+        max-width: 150%;
+        margin-left: -25%;
+    }
+
+    /* Leave all images in the blog summary feed narrower. */
+    .asymetrical-columns-right.reading-block img.wide {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
     .archive h1 {
         margin-left: -3em;
     }
@@ -756,6 +767,11 @@ hr.reading-block {
     figcaption {
         left: -12em;
         width: 10em;
+    }
+
+    .reading-block img.wide {
+        max-width: none;
+        margin-left: -32.1%;
     }
 }
 
