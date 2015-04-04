@@ -55,6 +55,18 @@
 </figure>
 {%- endmacro %}
 
+{% macro embed_video(video_id, platform) -%}
+{%- if platform|lower == 'youtube' -%}
+    {% set platform_url = '//www.youtube.com/embed/' %}
+{%- elif platform|lower == 'vimeo' -%}
+    {% set platform_url = '//player.vimeo.com/video/' %}
+{%- endif -%}
+<div class="responsive-embedded-container">
+    <iframe src="{{ platform_url }}{{ video_id }}"
+        frameborder="0" allowfullscreen></iframe>
+</div>
+{%- endmacro %}
+
 {# docs: https://dev.twitter.com/docs/embedded-tweets #}
 {% macro embed_tweet(content, username, tweet_id, timestamp) -%}
 <blockquote class="twitter-tweet"
