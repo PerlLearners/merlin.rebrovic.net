@@ -131,3 +131,8 @@ ErrorDocument 404 /page-not-found.html
     </IfModule>
 
 </IfModule>
+
+<IfModule headers_module>
+    # http://www.gnuterrypratchett.com/
+    Header set X-Clacks-Overhead "GNU Terry Pratchett"
+</IfModule>
