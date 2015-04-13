@@ -1,0 +1,72 @@
+---
+title: GNU Terry Pratchett
+created: !!timestamp '2015-04-13'
+category: News
+cover_image: external/2015-04-13_terry_artwork.jpg
+short_description:
+    How I found a way to commemorate Sir Terry Pratchett.
+---
+
+{% mark excerpt %}
+{{ macros.external_image("2015-04-13_terry_artwork.jpg",
+"Terry Pratchett artwork in an alley off Brick Lane.") }}
+
+March 12 was a very sad day. [Sir Terry][1] finally met one of
+his Discworld characters, the one from the [artwork][2].
+[1]: http://en.wikipedia.org/wiki/Terry_Pratchett
+[2]: https://www.flickr.com/photos/raindog/17042361692/in/photostream/
+{% endmark %}
+
+{{ macros.embed_tweet("AT LAST, SIR TERRY, WE MUST WALK TOGETHER.",
+"terryandrob", "576036599047258112", "2015-03-12") }}
+
+{{ macros.embed_tweet("Terry took Death’s arm and followed him
+through the doors and on to the black desert under the endless
+night.",
+"terryandrob", "576036726046646272", "2015-03-12") }}
+
+I was speechless. I read almost all his books in the last 15
+years and I'm a big fan. I tried to write something when I
+heard the news, but nothing came out. One [reddit user][3]
+accurately described how I felt:
+
+<blockquote>
+I don’t feel I have the right to mourn.. that by rights should
+be his family’s but I can't help but shed tears for the man
+who wrote a universe for me to grow up in and kindly
+companions to keep a growing boy company. Even now I dive into
+his books and it’s like meeting old friends. Thank you sir for
+giving us that. Your loss is felt far and wide.
+</blockquote>
+
+A few days ago I stumbled upon an interesting way to
+commemorate Terry. It's a nerdy, non-obvious and technical,
+but I find it very fitting. It's called [GNU Terry
+Pratchett][4] and its mission is:
+
+<blockquote>
+Keeping the legacy of Sir Terry Pratchett alive forever.<br>
+For as long as his name is still passed along the Clacks,<br>
+Death can't have him.
+</blockquote>
+
+Clacks are like a telegraph nodes in Discworld, and they would
+be servers in our world. The proposed solution is injecting a
+custom HTTP header with Terry's name into every response from
+a server. If you check under the hood of this website with
+some developer tools, you will see this:
+
+    Response Headers
+      X-Clacks-Overhead: GNU Terry Pratchett
+
+If you didn't read his books and this doesn't make any sense,
+don't worry, it's meant to be obscure and for fans only.
+Everyone interested in more context should read a longer
+excerpt from Terry's book available on [reddit][5].
+
+{{ macros.embed_tweet("The End.",
+"terryandrob", "576036888190038016", "2015-03-12") }}
+
+[3]: http://www.reddit.com/r/discworld/comments/2ysv26/sir_terry_has_gone_for_the_long_walk_across_the/cpcn4ur
+[4]: http://www.gnuterrypratchett.com
+[5]: http://www.reddit.com/r/discworld/comments/2ysv26/sir_terry_has_gone_for_the_long_walk_across_the/cpcmru1
