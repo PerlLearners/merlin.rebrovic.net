@@ -1,6 +1,6 @@
 {% if site.config.mode == "production" %}
 WebFontConfig = {
-    google: { families: [ 'Quattrocento::latin', 'Source+Sans+Pro:900:latin' ] }
+    google: { families: [ 'Open+Sans:400,400italic:latin', 'Source+Sans+Pro:900:latin' ] }
 };
 (function() {
     var wf = document.createElement('script');

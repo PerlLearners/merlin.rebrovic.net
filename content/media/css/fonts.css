@@ -7,9 +7,17 @@
 }
 
 @font-face {
-  font-family: 'Quattrocento';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Quattrocento'),
-       url({{ media_url('fonts/Quattrocento.woff') }}) format('woff');
+  src: local('OpenSans'), local('Open Sans'),
+       url({{ media_url('fonts/OpenSans-Regular.woff') }}) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: local('OpenSans-Italic'), local('Open Sans Italic'),
+       url({{ media_url('fonts/OpenSans-Italic.woff') }}) format('woff');
 }

@@ -98,7 +98,7 @@ html {
     background-color: #20201c;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Quattrocento", Georgia, serif;
+    font-family: "Open Sans", Verdana, sans-serif;
     color: #CCC;
 }
 
@@ -108,8 +108,8 @@ html {
 h1 {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 900;
-    font-size: 2em; /* 18px * 2 = 36px */
-    line-height: 1; /* it should be less for rythm, but overlapping occurs */
+    font-size: 2em;
+    line-height: 1;
     color: #EAD075;
     text-shadow: 0 0.05em 0.05em black;
 }
@@ -117,10 +117,11 @@ h1 {
 h2 {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 900;
-    font-size: 1.3333333em; /* 18px * 1.3 = 24px */
-    line-height: 1.125; /* 27px */
+    font-size: 1.3333333em;
+    line-height: 1.125;
     margin-bottom: 1.125em;
     text-shadow: 0 0.05em 0.05em black;
+    color: #B9543C;
 }
 
 a, a:visited {
@@ -151,7 +152,7 @@ em {
 }
 
 #main-content {
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    font-size: 1em;
     line-height: 1.5;
     max-width: 53.3333em; /* 53.3333 * 18px = 960px */
     margin: 0 auto;
@@ -168,7 +169,6 @@ header {
 
 #top {
     padding: 0 1em;
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
 }
 
 #top .current-location {
@@ -183,12 +183,12 @@ header {
     background-color: #444;
     display: block;
     float: right;
-    border-bottom: 0.3em solid #b9543c;
+    border-bottom: 0.3em solid #B9543C;
 }
 
 #top a:hover,
 #top a:focus {
-    background-color: #06736C;
+    background-color: #09AA9F;
     transition: background-color 150ms;
 }
 
@@ -199,17 +199,17 @@ header {
 #top-nav ul {
     padding: 0 0.7em;
     margin-top: 0.5em;
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
     float: right;
 }
 
 #top-nav ul li {
     float: left;
     text-align: center;
+    margin-right: 0.5em;
 }
 
 #top-nav ul li a {
-    padding: 0.7em 0.5em 0.5em 0.5em;
+    padding: 0.7em 0.5em 0.7em 0.5em;
     border-bottom: none;
     color: #CCC;
     display: block;
@@ -221,7 +221,7 @@ header {
 }
 
 #top-nav ul li.active {
-    border-bottom: 0.3em solid #b9543c;
+    border-bottom: 0.3em solid #B9543C;
 }
 
 #top-nav ul li.active a {
@@ -229,7 +229,6 @@ header {
 }
 
 #bottom-nav {
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
     line-height: 1.5;
     margin: 0 auto;
     padding: 0 1em;
@@ -252,7 +251,7 @@ header {
 .back-to-top:hover,
 .back-to-top:focus {
     color: white;
-    background-color: #06736C;
+    background-color: #09AA9F;
     transition: background-color 150ms, color 150ms;
 }
 
@@ -262,15 +261,14 @@ header {
 
 #bottom-nav ul li.active a:hover,
 #bottom-nav ul li.active a:focus {
-    border-left: 0.5em solid #06736C;
+    border-left: 0.5em solid #B9543C;
     transition: border-color 150ms;
 }
 
 .back-to-top {
     display: block;
     margin: 0.5em 1em 1em 1em;
-    padding: 0.7em 0 0.5em 1em;
-    font-size: 1.125em; /* 16px * 1.125 = 18px */
+    padding: 0.7em 0 0.7em 1em;
     line-height: 1.5;
     color: #CCC;
     background-color: #444;
@@ -285,18 +283,21 @@ header {
 }
 
 #intro h1 {
+    font-size: 2.5em; /* 16px * 2.5 = 40px */
     margin-bottom: 0.75em;
 }
 
 #intro img {
     width: 100%;
-    max-width: 10em;
+    max-width: 13em;
     margin: 0 auto 2em auto;
     display: block;
+    z-index: -1; /* text sometimes overlaps the image */
 }
 
 #intro .roles {
     margin-bottom: 1.5em;
+    font-size: 1.1666667em;
 }
 
 .column-half {
@@ -378,7 +379,7 @@ header {
 }
 
 .reading-block .figure-caption {
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: #AAA;
 }
 
@@ -387,7 +388,7 @@ header {
 }
 
 .reading-block .post-meta {
-    font-size: 0.75em;
+    font-size: 0.8em;
     line-height: 2em;
     color: #AAA;
     margin-bottom: 1em;
@@ -449,7 +450,7 @@ hr.reading-block {
 }
 
 .latest-posts .meta {
-    font-size: 0.75em;
+    font-size: 0.8em;
     line-height: 2em;
     color: #AAA;
 }
@@ -484,19 +485,20 @@ hr.reading-block {
 /***********************************
  Media queries
  **********************************/
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 27em) {
     #intro h1 br {
         display: none;
     }
 }
 
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 27em) {
     /* 30em * 16px (default size) = 480px */
     header {
         margin-bottom: 2em;
     }
 
     #top-nav {
+        padding: 0.7em 1em 0.5em 1em;
         display: block;
     }
 
@@ -506,9 +508,8 @@ hr.reading-block {
         display: none;
     }
 
-    /* homepage */
     #intro {
-        margin-bottom: 12em;
+        margin-bottom: 10em;
     }
 
     #intro .contact-list {
@@ -519,8 +520,9 @@ hr.reading-block {
 
     #intro img {
         position: absolute;
-        right: 3%;
+        right: 0;
         top: 80%;
+        max-width: 12em;
     }
 
     .contact-list li {
@@ -554,7 +556,7 @@ hr.reading-block {
 
     /* archive */
     .latest-posts .title {
-        width: 65%;
+        width: 67%;
     }
     .latest-posts .meta {
         position: absolute;
@@ -569,29 +571,22 @@ hr.reading-block {
     }
 }
 
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 32em) {
     /* 36em * 16px (default size) = 576px */
-    header {
-        margin-bottom: 3em;
-    }
-
-    #top-nav ul li a {
-        padding: 0.7em 1em 0.5em 1em;
-    }
-
     #intro h1 {
-        font-size: 2.6666667em; /* 18px * 2.6 = 48px */
+        font-size: 3em;
         margin-bottom: 0.5em;
         z-index: 2;
         position: relative;
     }
 
     #intro img {
-        max-width: 13em;
+        max-width: 14em;
+        right: 3%;
     }
 
-    .column-half h2 { /* TODO: recalculate and make specific for the homepage */
-        font-size: 1.5em; /* 18px * 1.5 = 27px */
+    .column-half h2 {
+        font-size: 1.5em;
         line-height: 1em;
         margin-bottom: 1em;
     }
@@ -606,23 +601,14 @@ hr.reading-block {
     }
 }
 
-@media only screen and (min-width: 42em) {
+@media only screen and (min-width: 37em) {
     /* 42em * 16px (default size) = 672px */
-    header {
-        margin: 0em auto 4em;
+    html {
+        font-size: 1.125em;
     }
 
-    #top-nav ul {
-        font-size: 1.3125em; /* 16px * 1.3124 = 21px */
-        margin-top: 1em;
-    }
-
-    #intro h1 {
-        font-size: 3.3333333em; /* 18px * 3.3* = 60px */
-    }
-
-    #intro .roles {
-        font-size: 1.1666667em;
+    #intro {
+        margin-bottom: 12em;
     }
 
     #intro .contact-list {
@@ -633,13 +619,22 @@ hr.reading-block {
         width: 50%;
     }
 
+    #intro img {
+        max-width: 12em;
+        right: 0;
+    }
+
     .column-half {
         float: left;
         width: 50%;
     }
 
     .column-half:first-child {
-        padding-right: 2em;
+        padding-right: 1em;
+    }
+
+    .column-half .latest-posts .title {
+        width: auto;
     }
 
     .column-half .latest-posts .meta {
@@ -651,8 +646,8 @@ hr.reading-block {
         width: auto;
     }
 
-    .reading-block {
-        font-size: 1.1666667em; /* 18px * 1.16* = 21px */
+    #top-nav ul li a {
+        padding: 0.7em 1em 0.7em 1em;
     }
 
     #speaking-photo {
@@ -660,10 +655,27 @@ hr.reading-block {
     }
 }
 
-@media only screen and (min-width: 52em) {
+@media only screen and (min-width: 46em) {
+    /* 52em * 16px (default size) = 832px */
+    #intro img {
+        top: 60%;
+        max-width: 14em;
+    }
+}
+
+@media only screen and (min-width: 50em) {
     /* 52em * 16px (default size) = 832px */
     #intro {
         margin-bottom: 9em;
+    }
+
+    #intro h1 {
+        font-size: 3.333333em;
+    }
+
+    #intro img {
+        top: 20%;
+        max-width: 16em;
     }
 
     #intro .contact-list {
@@ -674,23 +686,20 @@ hr.reading-block {
         width: 25%;
     }
 
-    #intro img {
-        top: 40%;
-        max-width: 14em;
+    .reading-block img.wide {
+        max-width: 150%;
+        margin-left: -25%;
+    }
+
+    /* Leave all images in the blog summary feed narrower. */
+    .asymetrical-columns-right.reading-block img.wide {
+        max-width: 100%;
+        margin-left: 0;
     }
 }
 
 @media only screen and (min-width: 60em) {
     /* 60em * 16px (default size) = 960px */
-    #intro img {
-        top: 20%;
-        max-width: 16em;
-    }
-
-    .column-half ul.latest-posts {
-        margin-left: 0;
-    }
-
     /* about me page */
     #photo-and-caption #photo {
         border-width: 0.7em;
@@ -706,29 +715,10 @@ hr.reading-block {
         float: left;
         width: 13em;
         margin-right: 4em;
-        /* make the text in the sidebar a bit smaller */
-        font-size: 1em;
-    }
-
-    .asymetrical-columns-left h2 {
-        /* make the heading font the same size
-           as in the main body text */
-        font-size: 1.555em;
     }
 
     .asymetrical-columns-right {
         float: left;
-    }
-
-    .reading-block img.wide {
-        max-width: 150%;
-        margin-left: -25%;
-    }
-
-    /* Leave all images in the blog summary feed narrower. */
-    .asymetrical-columns-right.reading-block img.wide {
-        max-width: 100%;
-        margin-left: 0;
     }
 
     .archive h1 {
@@ -755,6 +745,11 @@ hr.reading-block {
         left: -10em;
         width: 8em;
     }
+
+    .reading-block img.wide {
+        max-width: 180%;
+        margin-left: -40%;
+    }
 }
 
 @media only screen and (min-width: 68em) {
@@ -769,8 +764,8 @@ hr.reading-block {
     }
 
     .reading-block img.wide {
-        max-width: none;
-        margin-left: -32.1%;
+        max-width: 191.6%;
+        margin-left: -46%;
     }
 }
 
