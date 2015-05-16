@@ -20,6 +20,9 @@ a stranger and say "Hi" on https://twitter.com/merlinrebrovic :)
     {# Use local fonts for development. #}
     <link rel="stylesheet" href="{{ media_url('css/fonts.css') }}" type="text/css">
 {% endif %}
+{% if site.config.mode == "production" -%}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic|Source+Sans+Pro:900' rel='stylesheet' type='text/css'>
+{% endif %}
 {% set cssfile = site.content.resource_from_relative_path('media/css/style.css') %}
     <link rel="stylesheet" href="{{ cssfile.full_url }}?v={{ cssfile.meta.content_hash }}" type="text/css">
 </head>

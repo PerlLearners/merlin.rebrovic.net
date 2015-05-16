@@ -98,16 +98,30 @@ html {
     background-color: #20201c;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Open Sans", Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     color: #CCC;
+}
+
+html.custom-fonts {
+    font-family: "Open Sans", Verdana, sans-serif;
 }
 
 /***********************************
  Main menu
  **********************************/
-h1 {
-    font-family: "Source Sans Pro", sans-serif;
+h1,
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+html.custom-fonts h1,
+html.custom-fonts h2 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-weight: 900;
+}
+
+h1 {
     font-size: 2em;
     line-height: 1;
     color: #EAD075;
@@ -115,14 +129,13 @@ h1 {
 }
 
 h2 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 900;
     font-size: 1.3333333em;
     line-height: 1.125;
     margin-bottom: 1.125em;
     text-shadow: 0 0.05em 0.05em black;
     color: #B9543C;
 }
+
 
 a, a:visited {
     color: white;
