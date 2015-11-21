@@ -30,7 +30,7 @@ context:
               url: speaking.html
         website_url: http://merlin.rebrovic.net
     providers:
-        most_popular: most_popular.yaml
+        featured_posts: featured_posts.yaml
 
 sorter:
     latest:

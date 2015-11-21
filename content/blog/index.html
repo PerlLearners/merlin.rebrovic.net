@@ -9,9 +9,9 @@ blog_post: False
 <p>I write about technology, psychology and design.
 Sometimes I write about people and places I visit.</p>
 
-<h2>Most popular posts</h2>
+<h2>Featured posts</h2>
 <ul>
-{% for post_filename in most_popular %}
+{% for post_filename in featured_posts %}
 {% set post = site.content.resource_from_relative_path(
     resource.node.relative_path + "/" + post_filename) %}
     <li><a href="{{ post.full_url }}">{{ post.meta.title }}</a></li>
