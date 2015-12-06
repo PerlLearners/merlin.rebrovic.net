@@ -414,6 +414,10 @@ header {
     margin-bottom: 1.5em;
 }
 
+.responsive-embedded-container.slideshare-16-9 {
+    padding-bottom: 64%; /* SlideShare adds player controls */
+}
+
 .responsive-embedded-container iframe {
     position: absolute;
     top: 0;
@@ -704,10 +708,24 @@ hr.reading-block {
         margin-left: -25%;
     }
 
+    .responsive-embedded-container.wide.slideshare-16-9 {
+        max-width: none;
+        width: 150%;
+        margin-left: -25%;
+        padding-bottom: 92%;
+    }
+
     /* Leave all images in the blog summary feed narrower. */
     .asymetrical-columns-right.reading-block img.wide {
         max-width: 100%;
         margin-left: 0;
+    }
+
+    .asymetrical-columns-right .responsive-embedded-container.wide.slideshare-16-9 {
+        max-width: 100%;
+        width: auto;
+        margin-left: 0;
+        padding-bottom: 64%;
     }
 }
 
@@ -763,6 +781,12 @@ hr.reading-block {
         max-width: 180%;
         margin-left: -40%;
     }
+
+    .responsive-embedded-container.wide.slideshare-16-9 {
+        width: 180%;
+        margin-left: -40%;
+        padding-bottom: 109%;
+    }
 }
 
 @media only screen and (min-width: 68em) {
@@ -779,6 +803,12 @@ hr.reading-block {
     .reading-block img.wide {
         max-width: 191.6%;
         margin-left: -46%;
+    }
+
+    .responsive-embedded-container.wide.slideshare-16-9 {
+        width: 191.6%;
+        margin-left: -46%;
+        padding-bottom: 116%;
     }
 }
 
