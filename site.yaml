@@ -43,11 +43,11 @@ grouper:
         description: Blog category
         groups:
             - name: Tech
-              description: Software engineering
+              description: Technology and programming
             - name: Design
               description: Sketching, visual arts and design
-            - name: News
-              description: Announcements and coverages
+            - name: Personal
+              description: Personal thoughts
             - name: People
               description: Psychology, education and motivation
             - name: Travel
