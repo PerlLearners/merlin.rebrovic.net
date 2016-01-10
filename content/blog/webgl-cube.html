@@ -1,0 +1,178 @@
+---
+title: WebGL cube
+created: !!timestamp '2016-01-10'
+category: Tech
+cover_image: external/2016-01-10_webgl_sketch.jpg
+short_description:
+    Technology and motivation behind my experiment of building
+    a WebGL cube that responds to device rotation.
+---
+
+{% mark excerpt %}
+{{ macros.external_wide_image("2016-01-10_webgl_sketch.jpg",
+"Sketches of WebGL cube and device rotation angles.") }}
+
+This demo and blog post almost didn't see the light of day.
+The Web has produced [impressive][1] [3D apps][2]
+[recently][3] and my concept seemed unremarkable compared to
+them. But after thinking about it for some time I realized I
+had built a _Hello World_ example and it's not fair to compare
+it to other apps. And my _Hello World_ packs some interesting
+features too.
+
+[1]: http://www.playkeepout.com/
+[2]: http://www.suissemania.ch/
+[3]: http://labs.gooengine.com/pearl-boy/
+
+I recommend opening the link on a phone or a tablet. I tested
+it in Chrome and Safari, so it should work on all newer
+Android and iOS devices. It will also work on desktop
+browsers, but you'll have to start the animation manually.
+
+<{{ website_url }}/experiment/webgl-cube/>
+
+If it got you interested, read on about my motivation and the
+technology used to build it.
+{% endmark %}
+
+Motivation
+----------
+
+[WebGL support][4] is improving daily and our mobile devices
+are more powerful than our desktop computers from a couple of
+years ago. All of this rekindled my passion for computer
+graphics. At the university I took all available computer
+graphics and virtual reality classes. There weren't as many
+as I wanted, but I had the opportunity to play with OpenGL and
+C among other things.
+
+Times have changed and JavaScript is all the rage nowadays.
+WebGL, a subset of OpenGL for the Web, is supported by many
+browsers today, so I wanted to give it a try. The problem is I
+completely forgot how OpenGL works.
+
+I had found a [WebGL course on Coursera][5] and decided I'll
+use it as a paced refresher. During the whole summer I was
+watching lectures and doing homework in my off-work hours. It
+was like being in school again--working and studying at the
+same time.
+
+I passed the course mid-September last year. I built some
+interesting things for assignments, but couldn't share them
+due to Coursera's restrictions; future course students might
+use them as their own submissions. At the same time, I wanted
+to build something for mobile. At concat in March 2015,
+[Franzisca Hinkelmann][6] demonstrated new and interesting web
+<abbr title="Application Programming Interface">API</abbr>s.
+One of them was _device orientation_ and it just stuck in my
+mind.
+
+It is not a surprise my first idea was to build something in
+WebGL that would react to rotation of a mobile device. I coded
+the concept in early fall, but had to leave it unfinished due
+to travel and work. Winter holidays came to the rescue. One
+long weekend later and the cube was ready.
+
+WebGL
+-----
+
+[WebGL][7] is the star of the show. It's a flavor of OpenGL,
+_"first created as an open and reproducable alternative to
+Iris GL which had been the proprietary graphics API on Silicon
+Graphics workstations"_ ([source][8]). In short: old. It's
+close to hardware and operates with global states, and that
+makes it hard to wrap your head around because it's so
+different from modern application development.
+
+On top of that, WebGL requires two languages to function:
+JavaScript and [GLSL][9]. The first is for initialization and
+application logic (events, interface manipulation, etc). The
+second resembles C and is used to write _shaders_.
+
+_Vertex and fragment shaders_ are GLSL programs which modify
+positions of vertices and colors of surfaces respectively.
+They run on <abbr title="Graphical Processing Unit">GPU</abbr>
+and can process huge amounts of data. Imagine a 3D scene with
+millions of vertices. If the camera rotates, all vertices have
+to change their position. This would be slow in JavaScript on
+a single thread in a browser, but is running blazing fast on a
+dedicated hardware. _Shaders_ are linked from HTML the same
+way as JavaScript and CSS.
+
+I didn't use any libraries to build the WebGL cube. I borrowed
+some helper functions from the author of the course to help
+with WebGL initialization and managing transformation of
+vectors and matrices between JavaScript and GLSL. Working
+bare-bones was a great learning experience, but also hard.
+Unless I'll want to build my own WebGL engine, I'll use
+[three.js][10], [GooEngine][11], or some other library in the
+future because they provide a reasonable level of abstraction.
+
+One resource I highly recommend is [WebGL Fundamentals][12].
+It's a series of almost thirty in-depth articles with clear
+explanations, code examples, and visualizations.
+
+Device orientation
+------------------
+
+Detecting device orientation is critical for this concept and
+fortunately not complex. An event listener is added to
+_deviceorientation_ if supported and the event returns 
+three angles which define the physical device in space.
+
+The biggest problem is inconsistency; different browser makers
+return different ranges for angles, so the cube might rotate
+in different directions if viewed in two different browsers.
+
+[MDN docs][13] should be more than enough to start with device
+orientation.
+
+One tip to keep in mind: even desktop browsers support this,
+so it's a not good indicator that someone is browsing on a
+mobile device.
+
+Screen orientation
+------------------
+
+The last thing I needed was to detect the screen orientation
+change. I needed that for two reasons:
+
+1. If I rotate a device to the side, my "up" and device's "up"
+   don't match anymore, so I need to read different angles. To
+   make things worse, I can rotate the device to left or right.
+2. I wanted to make the cube always fully visible on the
+   screen so I needed to resize the drawing canvas.
+
+I first looked into [Screen Orientation API][14]. It is not as
+supported as Device Orientation and different browsers return
+different values depending on what they think "the right
+orientation for that device" should be. While searching for an
+easy solution I stumbled upon an interesting article that
+describes [six CSS and JavaScript techniques to detect screen
+orientation][15].
+
+In the end I settled on something quick and dirty--I'm
+listening to _resize_ event and checking if the viewport ratio
+changed. It's not flawless and will break in some cases, but
+does two things at the same time:
+
+1. Handles resizing of desktop browsers.
+2. Mobile browsers, for now, change their viewport ratios only
+   when rotated. We'll see how it'll work out with split pane
+   functionality some tablets will support in the future.
+
+And that's all there is to it. Now go and [create something][16].
+
+[4]: http://caniuse.com/#feat=webgl
+[5]: https://www.coursera.org/course/webgl
+[6]: https://www.youtube.com/watch?v=X3-EL2XRUXU
+[7]: https://www.khronos.org/webgl/
+[8]: https://www.opengl.org/wiki/History_of_OpenGL
+[9]: https://www.opengl.org/documentation/glsl/
+[10]: http://threejs.org/
+[11]: https://github.com/GooTechnologies/goojs
+[12]: http://webglfundamentals.org/
+[13]: https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation
+[14]: https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation
+[15]: http://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371
+[16]: [[ blog/create.html ]]
