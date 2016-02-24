@@ -29,7 +29,7 @@ Sometimes I photograph places I visit.</p>
 {% refer to res.relative_path as post %}
 
 <article class="excerpt">
-<h1><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
+<h1><a href="{{ content_url(res.url) }}">{{ res.meta.title|typogrify }}</a></h1>
 <p class="post-meta">
     Posted on
     <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">

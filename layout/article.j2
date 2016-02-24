@@ -3,7 +3,7 @@
 {% block blog_post %}
 <article class="reading-block">
 
-<h1 itemprop="headline">{{ resource.meta.title }}</h1>
+<h1 itemprop="headline">{{ resource.meta.title|typogrify }}</h1>
 <p class="post-meta">
     Posted on
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
