@@ -721,6 +721,13 @@ hr.reading-block {
         margin-left: 0;
     }
 
+    /* Leave all captions in the blog summary under an image. */
+    .asymetrical-columns-right.reading-block figcaption {
+        text-align: left;
+        position: initial;
+        width: 100%;
+    }
+
     .asymetrical-columns-right .responsive-embedded-container.wide.slideshare-16-9 {
         max-width: 100%;
         width: auto;
