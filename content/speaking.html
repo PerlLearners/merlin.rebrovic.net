@@ -10,8 +10,8 @@ blog_post: False
     workshops I did over the last few years.
     <a data-action="track-event" data-gacategory="Navigation"
        data-gaaction="Biography"
-       href="#bio">My short bio and a link to a profile photo</a>
-    can be found at the bottom of the page.</p>
+       href="#bio">My short bio and my photo</a>
+            can be found at the bottom of the page.</p>
 
     <div id="speaking-photo">
         <img src="{{ media_url('img/speaking.jpg') }}?v=2"
@@ -22,207 +22,193 @@ blog_post: False
 </article>
 
 <article class="asymetrical-columns-right speaking reading-block">
-<h1>Events</h1>
+<h1>Talks and workshops</h1>
 {% filter markdown|typogrify -%}
 
-<h2 id="concat-2015">.concat()</h2>
-<p class="post-meta">Conference, 2015-03-07, Salzburg, Austria</p>
 
-Talk title: Storytelling in design and engineering
+<h2 id="storytelling">Storytelling in design and engineering</h2>
+<p class="post-meta">Design talk</p>
 
-* [Official web](https://conc.at/)
-* [Blog post with contents of the talk]([[blog/storytelling-in-design-and-engineering.html ]])
-* [YouTube video](https://www.youtube.com/watch?v=e0Do301PItQ)
-
-<h2 id="wud-berlin-2014">World Usability Day 2014 Berlin</h2>
-<p class="post-meta">Conference, 2014-11-13, Berlin, Germany</p>
-
-Talk title: Storytelling in design and engineering
-
-* [Official web](http://2014.wud-berlin.de/events/storytelling/)
-* [Blog post with contents of the talk]([[blog/storytelling-in-design-and-engineering.html ]])
-
-<h2 id="webcamp-zg-2014">WebCamp Zagreb 2014</h2>
-<p class="post-meta">Conference, 2014-10-04, Zagreb, Croatia</p>
-
-Talk title: Storytelling in design and engineering
-
-When someone says "storytelling", either marketing or children
+When someone says "storytelling," either marketing or children
 bedtime stories come to mind. Both are valid, but far from
-being the only places storytelling appears in. Stories are
+being the only places where storytelling appears. Stories are
 illustrative, easily memorable and often reach us on an
 emotional level. They are very much a part of design and
-engineering cultures today, it's just that we're not
+engineering cultures today; it's just that often we're not
 consciously aware of them.
 
-* [Official web](http://2014.webcampzg.org/speakers/merlin-rebrovic-storytelling-in-design-and-engineering/)
+* [Blog post with contents of the talk]([[ blog/storytelling-in-design-and-engineering.html ]])
+* [YouTube video](https://www.youtube.com/watch?v=e0Do301PItQ) from .concat()
 
-Workshop title: Understanding Git
+Events:
 
-Git is probably the most popular version control program in
-the world. It's very powerful and gives a lot of freedom to
-users. That's great, but if combined with not knowing what is
-actually happening under the hood, it can lead to a disaster
-(or can prevent recovering from one). In this workshop we've
-covered how Git stores data internally and what happens when
-you issue a command. We discussed principles and underlying
-structure, and how different commands map to desired actions
-or outcomes.
+* [.concat()](https://conc.at/), conference, 2015-03-07, Salzburg, Austria
+* [World Usability Day 2014 Berlin](http://2014.wud-berlin.de/events/storytelling/), conference, 2014-11-13, Berlin, Germany
+* [WebCamp Zagreb 2014](http://2014.webcampzg.org/speakers/merlin-rebrovic-storytelling-in-design-and-engineering/), conference, 2014-10-04, Zagreb, Croatia
 
-* [Official web](http://2014.webcampzg.org/workshops/merlin-rebrovic-understanding-git/)
 
-<h2 id="wiad-2014">World Information Arhitecture Day</h2>
-<p class="post-meta">Conference, 2014-02-15, Zagreb, Croatia</p>
+<h2 id="understanding-git">Understanding Git</h2>
+<p class="post-meta">Tech workshop</p>
 
-Title: Navigating the Mobile World
+Git is the most popular version control program in the world.
+It is powerful and leaves a lot of freedom to users. That is
+great, but without understanding what is happening under the
+hood, it can lead to a disaster or can prevent recovering from
+one. In the workshop, we covered how Git stores data
+internally and what happens when you issue a command. We
+discussed principles and underlying structure, and how
+different commands map to desired outcomes.
+
+Events:
+
+* Independently organized event, 2016-09-02, Zagreb, Croatia
+* [WebCamp Zagreb 2014](http://2014.webcampzg.org/workshops/merlin-rebrovic-understanding-git/), conference, 2014-10-04, Zagreb, Croatia
+* [Syple Technologies]([[ blog/sydney-git-workshop.html ]]), company, 2013-03-07, Sydney, Australia
+* Five, company, multiple workshops in 2012 and 2013, Zagreb, Croatia
+
+
+<h2 id="fundamentals-of-ui-design">Fundamentals of user interface design</h2>
+<p class="post-meta">Design talk</p>
+
+A presentation tailored for people who had minimal or no
+exposure to design, but would like to learn the basics.
+
+* [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/fundamentals-of-user-interface-design-55970437)
+
+Events:
+
+* Google's internal presentation to engineers, 2015, Zürich, Switzerland
+* Guest lectures at "Java in business environments" course, Faculty of Electrical Engineering and Computing, 2012 and 2013, Zagreb, Croatia
+
+
+<h2 id="mobile-navigation">Navigating the mobile world</h2>
+<p class="post-meta">Design talk</p>
 
 The talk covered navigation and presentation patterns on the
 two most popular mobile platforms of the day: iOS and Android.
 We looked deeply into the similarities and differences between
-them, best practices and real life examples.
+them, best practices, and real-life examples.
 
 * [External blog post](http://www.uxpassion.com/blog/interaction-design/wiad-video-talk-navigating-mobile-world)
 * [Video on Vimeo](http://vimeo.com/97146773) (in Croatian)
 
-<h2 id="fer-design-2013">Faculty of Electrical Engineering and Computing</h2>
-<p class="post-meta">University, 2013-12-18, Zagreb, Croatia</p>
+Events:
 
-Title: The basics of design and user interfaces
+* World Information Arhitecture Day, conference, 2014-02-15, Zagreb, Croatia
 
-Introducing basic design principles to computer science
-students in a guest lecture as a part of "Java in business
-environments" curriculum. After the lecture we continued with
-a sketching workshop where students presented interfaces of
-their projects and we tried to find problems and possible
-solutions to them. _(Repeated the [same lecture from last
-year](#fer-design-2012), listed lower on the page)_
 
-<h2 id="webtanken-2013">Webtanken</h2>
-<p class="post-meta">Conference, 2013-11-28, Kristiansand, Norway</p>
+<h2 id="be-beautiful">Be Beautiful</h2>
+<p class="post-meta">Design talk</p>
 
-Title: Mobile Commerce&mdash;Technical Overview
-
-Smartphones became essential part of our lives even though
-they went mainstream only a few years ago. The consequence is
-that we're still learning how people use mobile technology and
-especially how they approach mobile shopping. There are many
-different technologies to build your m-commerce solution upon,
-each with specific pros and cons. In this talk I presented
-what technology to choose in a particular situation and how
-each solution empowers customers and improves online store
-business. 
-
-<h2 id="atd-2013">Advanced Technology Day 9</h2>
-<p class="post-meta">Conference, 2013-12-02, Zagreb, Croatia</p>
-
-Title: Be Beautiful
-
-_(Repeated the earlier [WebCamp 2013](#webcamp-zg-2013) talk
-listed below)_
-
-<h2 id="webcamp-zg-2013">WebCamp Zagreb 2013</h2>
-<p class="post-meta">Conference, 2013-10-26, Zagreb, Croatia</p>
-
-Title: Be Beautiful
-
-The talk described the process of modifying the existing
-beauty and cosmetics web shop BliVakker to a mobile version,
-helping it become the biggest and most profitable norwegian
-mobile shop in its niche.
+The talk about the process of modifying the existing beauty
+and cosmetics web shop BliVakker to a mobile version, helping
+it become the biggest and most profitable Norwegian mobile
+store in its category.
 
 * [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/blivakker)
 * [Blog post about the talk]([[ blog/webcamp-zagreb-2013-talk.html ]])
-* [Blog post about the conference]([[ blog/webcamp-zagreb-2013-conference.html ]])
-* [Official web](http://2013.webcampzg.org/speakers/merlin-rebrovic/)
 * [YouTube video](http://www.youtube.com/watch?v=a3Vhu9w0rps) (in Croatian)
 
-<h2 id="windays-2013">Windays 13</h2>
-<p class="post-meta">Conference, 2013-04-24, Umag, Croatia</p>
+Events:
 
-Title: Building Modern Software:  User Experience and Design
+* Advanced Technology Day 9, conference, 2013-12-02, Zagreb, Croatia
+* [WebCamp Zagreb 2013](http://2013.webcampzg.org/speakers/merlin-rebrovic/), conference, 2013-10-26, Zagreb, Croatia
+
+
+<h2 id="mobile-commerce">Mobile commerce: a technical overview</h2>
+<p class="post-meta">Tech talk</p>
+
+Smartphones became an essential part of our lives even though
+they went mainstream only a few years ago. The consequence is
+that we are still learning how people use mobile technology
+and especially how they approach mobile shopping. There are
+many different ways to build your m-commerce solution, each
+with distinct pros and cons. In this talk, I presented what
+technology to choose in a particular situation and how each
+solution empowers customers and improves online store
+business. 
+
+Events:
+
+* Webtanken, conference, 2013-11-28, Kristiansand, Norway
+
+
+<h2 id="building-modern-software">Building modern software: user experience and design</h2>
+<p class="post-meta">Design talk</p>
 
 Do you remember the days when all that was needed was to be
-first or have the most features? They are over. Users have
+first or have the most features? They are over. People have
 become much smarter and more demanding. The only way to be
-successful is to think of design being as important as
-engineering. This talk described how designer and developer
-roles intertwine from the beginning and how they should have
-user's goals in mind during the whole project.
+successful is to adapt the mindset where design is as
+important as engineering. This talk described how designer and
+developer roles intertwine from the beginning and how they
+should have user's goals in mind during the whole project.
 
 * [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/building-modern-software-ux-and-design)
 * [Blog post]([[ blog/windays-2013.html ]])
 
-<h2 id="asc-2013">App Start Contest</h2>
-<p class="post-meta">University, 2013-03-20, Zagreb, Croatia</p>
+Events:
 
-Title: Coding is only half the story
+* Windays 13, conference, 2013-04-24, Umag, Croatia
 
-App Start Contest is a student contest of building mobile apps
-at the University of Zagreb. There was a series of guest
-lectures helping students organize, plan and implement their
-app, and I did the same lecture about visual communication
-from [WebCamp 2012](#webcamp-zg-2012).
 
-* [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/programiranje-je-samo-pola-price)
-
-<h2 id="fer-design-2012">Faculty of Electrical Engineering and Computing</h2>
-<p class="post-meta">University, 2012-12-17, Zagreb, Croatia</p>
-
-Title: The basics of design and user interfaces
-
-Introducing basic design principles to computer science
-students in a guest lecture as a part of "Java in business
-environments" curriculum. After the lecture we continued with
-a sketching workshop where students presented interfaces of
-their projects and we tried to find problems and possible
-solutions to them.
-
-<h2 id="webcamp-zg-2012">WebCamp Zagreb 2012</h2>
-<p class="post-meta">Conference, 2012-11-24, Zagreb, Croatia</p>
-
-Title: Coding is only half the story
+<h2 id="half-the-story">Coding is only a half of the story</h2>
+<p class="post-meta">Design talk</p>
 
 The other half is client and team communication. This talk
-revolved around visual communication tools like sketches,
-wireframes and clickable prototypes, all with the goal of
-having shared understanding of the project.
+revolved around how visual communication tools—like sketches,
+wireframes, and clickable prototypes—help establish a shared
+understanding of the project.
 
 * [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/programiranje-je-samo-pola-price)
 * [Blog post]([[ blog/webcamp-zagreb-2012.html ]])
-* [Official web](http://2012.webcampzg.org/merlin-rebrovic-programiranje-je-samo-pola-price/)
 * [YouTube video](http://www.youtube.com/watch?v=WK1J80W6z2E) (in Croatian)
 
-<h2 id="codeatsix-2012">Code @ Six</h2>
-<p class="post-meta">Meetup, 2012-03-22, Zagreb, Croatia</p>
+Events:
 
-Title: Hacking Git history  
+* App Start Contest, university event, 2013-03-20, Zagreb, Croatia
+* [WebCamp Zagreb 2012](http://2012.webcampzg.org/merlin-rebrovic-programiranje-je-samo-pola-price/), conference, 2012-11-24, Zagreb, Croatia
+
+
+<h2 id="hacking-git-history">Hacking Git history</h2>
+<p class="post-meta">Tech talk</p>
 
 In a short on-hands session I showed how to best change and
 break Git history through available command line tools.
 
-<h2 id="webug-2011">Web User Group</h2>
-<p class="post-meta">Meetup, 2011-10-25, Zagreb, Croatia</p>
+Events:
 
-Title: Static website generators
+* Code @ Six, meetup, 2012-03-22, Zagreb, Croatia
 
-Static websites are back. They're fast, secure and simple, and
-if you need dynamic parts, most of it can be done through
-JavaScript. They are not cure for everything, but have their
-specific uses. There are many tools&mdash;static website
-generators&mdash;that can help you with building and managing
-one.
+
+<h2 id="static-website-generators">Static website generators</h2>
+<p class="post-meta">Tech talk</p>
+
+Static websites are fast, secure, and simple. If you need
+dynamic parts, you can address it with JavaScript. Static
+websites can't replace everything, but there are specific
+use-cases where static websites outperform other solutions.
 
 * [SlideShare presentation](http://www.slideshare.net/merlinrebrovic/static-website-generators)
 
-<h2 id="mobilecamp-2010">MobileCamp Ljubljana</h2>
-<p class="post-meta">Conference, 2010-03-27, Ljubljana, Slovenia</p>
+Events:
 
-Developing mobile web&mdash;examples and experience
- 
+* Web User Group, meetup, 2011-10-25, Zagreb, Croatia
+
+
+<h2 id="developing-mobile-web">Developing mobile web: examples and
+experience</h2>
+<p class="post-meta">Tech talk</p>
+
 Zoran Meliš and I talked about and demonstrated mobile web
 development processes and environments. It was only a few
 years ago, but mobile technology was very different then.
+
+Events:
+
+* MobileCamp, conference, 2010-03-27, Ljubljana, Slovenia
 {%- endfilter %}
+
 
 <h1 id="bio">Bio</h1>
 <p>
