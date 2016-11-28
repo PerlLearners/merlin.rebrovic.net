@@ -19,15 +19,15 @@ context:
             - name: Home
               type: page
               url: index.html
-            - name: About
-              type: page
-              url: about.html
             - name: Blog
               type: node
               url: blog/
             - name: Speaking
               type: page
               url: speaking.html
+            - name: About
+              type: page
+              url: about.html
         website_url: http://merlin.rebrovic.net
     providers:
         featured_posts: featured_posts.yaml
