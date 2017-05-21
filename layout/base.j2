@@ -57,9 +57,7 @@ https://twitter.com/merlinrebrovic
     {% endif %}
     </div>
     {{ macros.render_main_navigation("bottom-nav") }}
-    <a data-action="track-event" data-gacategory="Navigation"
-       data-gaaction="Back to top"
-       href="#top" class="back-to-top">Back to top &#x25b2;</a>
+    <a href="#top" class="back-to-top">Back to top &#x25b2;</a>
 
 {% set jsfile = site.content.resource_from_relative_path('media/js/app.js') %}
 <script src="{{ jsfile.full_url }}?v={{ jsfile.meta.content_hash }}"></script>
