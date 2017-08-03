@@ -1,0 +1,77 @@
+---
+title: Bias and discrimination in machine learning
+created: !!timestamp '2017-08-03'
+category: Tech
+short_description:
+    If we're not careful, we could harm other people on an
+    unprecedented scale.
+---
+
+{% mark excerpt %}
+Imagine a group of government officials who take and process
+passport applications. The application consists of filling in
+a form and handing over one photo of the applicant's face. All
+officials try to do good work except one. That official is
+racist and rejects every application from a person who looks
+different. The people in the government notice the
+discrimination. They decide to introduce a machine that will
+learn from all applications processed by good officials. The
+machine is consistent; it equalizes criteria for all
+applications, so current and future discrimination is gone.
+But is it?
+{% endmark %}
+
+At first glance, everything works fine. However, over time the
+people at the government get many complaints from people of
+Asian descent: photos with distinctly Asian facial features
+usually don't pass automated checks. How is that possible?
+Shouldn't the machine be consistent?
+
+The example above is not imaginary; it's based on real-world
+situations. A man's [visa application was rejected in New
+Zealand][1] because the machine thought his eyes were closed
+on his photo. A face-detection software in cameras [asks if
+someone is blinking][2] if the camera is pointed toward a
+person of Asian descent. This can happen to any type of face.
+[An MIT grad student][3] found that a publicly available
+software for face detection didn't recognize faces with dark
+skin tones at all. 
+
+Let's acknowledge that many such outcomes are not intentional.
+The underlying problem is that a machine learned from
+incomplete data: photos of people of Asian descent or with
+dark skin were not used as learning examples. The machine
+learned that the whole population consists only of people with
+fair skin, and held an implicit bias against those who were
+not in that population.
+
+The fix for this, and for the more general problem of bias and
+discrimination in machine learning, is hard for many reasons:
+
+* People don't realize they aren't inclusive. It's easy to
+  recognize a movie star in the latest blockbuster. In
+  contrast, it's hard to notice that a small-time actor, who
+  played in a couple of movies ten years ago, didn't make a
+  movie since then. Likewise, it's easier to notice an error
+  in training examples you have than to notice that some
+  examples are missing.
+* Having many good and diverse examples needed for machine
+  learning is rare. Bigger companies and institutions might
+  have them, but the examples are usually not shared for
+  business or privacy reasons (think medical records).
+* Companies operate in a system that favors firstcomers so
+  they're often incentivized to release early. Some of them
+  rush and don't think through all the consequences their
+  machine learning models might have.
+
+When I had an issue at a counter in Croatia, I would go to
+another one or come back later; the issue would go away
+because a different person would be sitting there. However,
+what if there is only one machine behind every counter at all
+times? Or at border crossings? Or in hospitals and schools? We
+have to fix the problem of bias in machine learning because
+the alternative is not an option. 
+
+[1]: http://www.dailymail.co.uk/news/article-4007714/New-Zealand-passport-gate-s-awkward-reason-failing-recognise-Asian-man-s-face.html
+[2]: http://content.time.com/time/business/article/0,8599,1954643,00.html
+[3]: https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms
